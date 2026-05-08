@@ -1,11 +1,11 @@
 import type { HierarchyPointNode, HierarchyNode } from 'd3-hierarchy';
 
 export interface RawNode {
-  id: number;
+  id: string;
   name: string;
   description: string;
   type: 'folder' | 'file';
-  parentId: number | null;
+  parentId: string | null;
   icon?: string;
   category?: 'personal' | 'health' | 'work' | 'projects';
 }

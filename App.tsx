@@ -2,7 +2,7 @@
 import React, { useState, useMemo, useCallback } from 'react';
 import * as d3 from 'd3';
 import { RawNode, MindMapNode, D3HierarchyNode } from './types';
-import { initialData } from './constants';
+import { blueprintData } from './constants';
 import Node from './components/Node';
 import Edge from './components/Edge';
 
@@ -24,8 +24,8 @@ const App: React.FC = () => {
   const { nodes, links } = useMemo(() => {
     // 1. Data Cleaning
     const uniqueData: RawNode[] = [];
-    const seenIds = new Set<number>();
-    for (const item of initialData) {
+    const seenIds = new Set<string>();
+    for (const item of blueprintData) {
       if (!seenIds.has(item.id)) {
         uniqueData.push(item);
         seenIds.add(item.id);
@@ -33,9 +33,9 @@ const App: React.FC = () => {
     }
     
     // 2. Add root
-    const dataWithRoot: (RawNode | {id: number; name: string; description: string; type: 'folder'; parentId: null; category?: any})[] = [
-        { id: 0, name: "Zain's Mind Map", description: "Central Hub", type: 'folder', parentId: null },
-        ...uniqueData.map(d => (d.parentId === null ? { ...d, parentId: 0 } : d))
+    const dataWithRoot: RawNode[] = [
+        { id: 'root', name: "Zain's Mind Map", description: "Central Hub", type: 'folder', parentId: null },
+        ...uniqueData.map(d => (d.parentId === null ? { ...d, parentId: 'root' } : d))
     ];
 
     // 3. Create hierarchy

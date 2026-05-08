@@ -40,12 +40,18 @@ const Node: React.FC<NodeProps> = ({ node, onToggle }) => {
   const LucideIcon = node.data.icon ? (icons as any)[Object.keys(icons).find(name => name.toLowerCase() === node.data.icon?.replace(/-/g, '').toLowerCase()) as string] : null;
 
   return (
-    <g transform={`translate(${cartesianX},${cartesianY})`} className="transition-transform duration-300 ease-in-out group">
+    <g
+      transform={`translate(${cartesianX},${cartesianY})`}
+      className={`transition-transform duration-300 ease-in-out group ${cursor}`}
+      onClick={handleToggle}
+    >
       <title>{node.data.description}</title>
-      <circle
-        r={14}
-        className={`stroke-2 transition-all duration-200 ${node.data.bg || 'fill-gray-800 stroke-gray-600'} ${node.data.hover || 'hover:fill-gray-700 hover:stroke-gray-500'} ${cursor}`}
-        onClick={handleToggle}
+      <rect
+        x={-14}
+        y={-14}
+        width={28}
+        height={28}
+        className={`stroke-2 transition-all duration-200 ${node.data.bg || 'fill-gray-800 stroke-gray-600'} ${node.data.hover || 'hover:fill-gray-700 hover:stroke-gray-500'}`}
       />
       <g transform="translate(-8, -8)" className={`pointer-events-none ${node.data.color || 'text-gray-400'}`}>
         {LucideIcon ? (
