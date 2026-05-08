@@ -39,7 +39,7 @@ const parseBlueprint = (): RawNode[] => {
     const name = row.name?.trim() || segments[segments.length - 1];
     const description = row.description?.trim() || '';
     const type = row.type?.trim() === 'folder' ? 'folder' : 'file';
-    const category = CATEGORY_BY_ROOT[segments[0]] ?? 'personal';
+    const category = CATEGORY_BY_ROOT[segments[0]];
 
     nodes.set(hierarchyPath, {
       id: hierarchyPath,

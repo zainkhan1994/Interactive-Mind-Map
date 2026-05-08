@@ -10,7 +10,7 @@ interface NodeProps {
 
 const NODE_SIZE = 28;
 const NODE_OFFSET = -NODE_SIZE / 2;
-const ICON_OFFSET = -8;
+const ICON_CENTER_OFFSET = -8;
 
 const Node: React.FC<NodeProps> = ({ node, onToggle }) => {
   const isFolder = node.data.type === 'folder';
@@ -57,7 +57,7 @@ const Node: React.FC<NodeProps> = ({ node, onToggle }) => {
         height={NODE_SIZE}
         className={`stroke-2 transition-all duration-200 ${node.data.bg || 'fill-gray-800 stroke-gray-600'} ${node.data.hover || 'hover:fill-gray-700 hover:stroke-gray-500'}`}
       />
-      <g transform={`translate(${ICON_OFFSET}, ${ICON_OFFSET})`} className={`pointer-events-none ${node.data.color || 'text-gray-400'}`}>
+      <g transform={`translate(${ICON_CENTER_OFFSET}, ${ICON_CENTER_OFFSET})`} className={`pointer-events-none ${node.data.color || 'text-gray-400'}`}>
         {LucideIcon ? (
            <LucideIcon size={16} strokeWidth={2.5} />
         ) : (
