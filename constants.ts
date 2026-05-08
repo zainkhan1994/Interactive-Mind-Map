@@ -12,7 +12,16 @@ const CATEGORY_BY_ROOT: Record<string, RawNode['category']> = {
 const normalizeName = (value: string) => value.replace(/_/g, ' ').trim();
 
 const parseBlueprint = (): RawNode[] => {
-  const rows = d3.csvParse(blueprintCsv);
+  let rows: d3.DSVRowArray<string>;
+  try {
+    rows = d3.csvParse(blueprintCsv);
+  } catch {
+    return [];
+  }
+
+  if (rows.length === 0) {
+    return [];
+  }
   const nodes = new Map<string, RawNode>();
 
   rows.forEach((row) => {
@@ -30,7 +39,7 @@ const parseBlueprint = (): RawNode[] => {
     const name = row.name?.trim() || segments[segments.length - 1];
     const description = row.description?.trim() || '';
     const type = row.type?.trim() === 'folder' ? 'folder' : 'file';
-    const category = CATEGORY_BY_ROOT[segments[0]];
+    const category = CATEGORY_BY_ROOT[segments[0]] ?? 'personal';
 
     nodes.set(hierarchyPath, {
       id: hierarchyPath,

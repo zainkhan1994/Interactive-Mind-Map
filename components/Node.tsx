@@ -8,6 +8,10 @@ interface NodeProps {
   onToggle: (id: string) => void;
 }
 
+const NODE_SIZE = 28;
+const NODE_OFFSET = -NODE_SIZE / 2;
+const ICON_OFFSET = -8;
+
 const Node: React.FC<NodeProps> = ({ node, onToggle }) => {
   const isFolder = node.data.type === 'folder';
   const hasChildren = !!node.children || !!node._children;
@@ -47,13 +51,13 @@ const Node: React.FC<NodeProps> = ({ node, onToggle }) => {
     >
       <title>{node.data.description}</title>
       <rect
-        x={-14}
-        y={-14}
-        width={28}
-        height={28}
+        x={NODE_OFFSET}
+        y={NODE_OFFSET}
+        width={NODE_SIZE}
+        height={NODE_SIZE}
         className={`stroke-2 transition-all duration-200 ${node.data.bg || 'fill-gray-800 stroke-gray-600'} ${node.data.hover || 'hover:fill-gray-700 hover:stroke-gray-500'}`}
       />
-      <g transform="translate(-8, -8)" className={`pointer-events-none ${node.data.color || 'text-gray-400'}`}>
+      <g transform={`translate(${ICON_OFFSET}, ${ICON_OFFSET})`} className={`pointer-events-none ${node.data.color || 'text-gray-400'}`}>
         {LucideIcon ? (
            <LucideIcon size={16} strokeWidth={2.5} />
         ) : (
