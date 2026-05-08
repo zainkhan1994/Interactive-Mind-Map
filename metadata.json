@@ -1,0 +1,6 @@
+{
+  "name": "Interactive Mind Map Visualizer",
+  "description": "An interactive, togglable mind map to visualize hierarchical data. Click on folder nodes to expand or collapse branches and explore the data relationships.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}
