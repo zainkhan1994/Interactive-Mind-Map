@@ -9,7 +9,10 @@ const CATEGORY_BY_ROOT: Record<string, RawNode['category']> = {
   'P - Projects': 'projects'
 };
 
-const normalizeName = (value: string) => value.replace(/_/g, ' ').trim();
+const HIERARCHY_DELIMITER = ' > ';
+const DEFAULT_CATEGORY: RawNode['category'] = 'personal';
+
+const formatDisplayName = (value: string) => value.replace(/_/g, ' ').trim();
 
 const parseBlueprint = (): RawNode[] => {
   let rows: d3.DSVRowArray<string>;
@@ -32,25 +35,26 @@ const parseBlueprint = (): RawNode[] => {
       return;
     }
 
-    const segments = hierarchyPath.split(' > ').map((segment) => segment.trim()).filter(Boolean);
+    const segments = hierarchyPath.split(HIERARCHY_DELIMITER).map((segment) => segment.trim()).filter(Boolean);
     if (segments.length === 0) {
       return;
     }
 
-    const parentPath = segments.length > 1 ? segments.slice(0, -1).join(' > ') : null;
+    const parentPath = segments.length > 1 ? segments.slice(0, -1).join(HIERARCHY_DELIMITER) : null;
     const name = row.name?.trim() || segments[segments.length - 1];
     const description = row.description?.trim() || '';
     const type = row.type?.trim() === 'folder' ? 'folder' : 'file';
     const rootSegment = segments[0];
-    const category = CATEGORY_BY_ROOT[rootSegment];
-    if (!category && !unknownRoots.has(rootSegment)) {
+    const mappedCategory = CATEGORY_BY_ROOT[rootSegment];
+    const category = mappedCategory ?? DEFAULT_CATEGORY;
+    if (!mappedCategory && !unknownRoots.has(rootSegment)) {
       console.warn(`Unknown root category "${rootSegment}" in blueprint CSV.`);
       unknownRoots.add(rootSegment);
     }
 
     nodes.set(hierarchyPath, {
       id: hierarchyPath,
-      name: normalizeName(name),
+      name: formatDisplayName(name),
       description,
       type,
       parentId: parentPath,
