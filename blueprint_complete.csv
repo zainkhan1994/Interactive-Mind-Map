@@ -1,0 +1,417 @@
+id,name,type,description,parentId,parentName,hierarchyPath,depth,childCount
+500,H - Health,folder,"Medical, mental, and personal wellness information",,,H - Health,0,5
+522,Health_Apps,folder,Linked apps and digital health platforms,500,H - Health,H - Health > Health_Apps,1,5
+526,BetterSleep,file,BetterSleep app,522,Health_Apps,H - Health > Health_Apps > BetterSleep,2,0
+524,Healow,file,Healow health app,522,Health_Apps,H - Health > Health_Apps > Healow,2,0
+527,Life_Time,file,Life Time fitness,522,Health_Apps,H - Health > Health_Apps > Life_Time,2,0
+523,MyChart,file,MyChart health portal,522,Health_Apps,H - Health > Health_Apps > MyChart,2,0
+525,PT_Solutions,file,PT Solutions physical therapy,522,Health_Apps,H - Health > Health_Apps > PT_Solutions,2,0
+514,Insurance_and_Coverage,folder,"Policies, claims, and provider networks",500,H - Health,H - Health > Insurance_and_Coverage,1,3
+516,Claims_and_EOBs,file,Insurance claims and explanation of benefits,514,Insurance_and_Coverage,H - Health > Insurance_and_Coverage > Claims_and_EOBs,2,0
+515,Health_Insurance_Policies,file,Health insurance policy information,514,Insurance_and_Coverage,H - Health > Insurance_and_Coverage > Health_Insurance_Policies,2,0
+517,Provider_Network_Info,file,In-network provider information,514,Insurance_and_Coverage,H - Health > Insurance_and_Coverage > Provider_Network_Info,2,0
+501,Medical_Records,folder,"Doctors, conditions, symptoms, and test history",500,H - Health,H - Health > Medical_Records,1,4
+503,Conditions_and_Symptoms,folder,"Diagnoses, recurring issues, notes",501,Medical_Records,H - Health > Medical_Records > Conditions_and_Symptoms,2,0
+502,Doctors_and_Providers,folder,"Contacts, specialties, visit notes",501,Medical_Records,H - Health > Medical_Records > Doctors_and_Providers,2,0
+504,Lab_Results_and_Tests,folder,Reports and uploads from labs,501,Medical_Records,H - Health > Medical_Records > Lab_Results_and_Tests,2,3
+505,LabCorp,file,LabCorp test results,504,Lab_Results_and_Tests,H - Health > Medical_Records > Lab_Results_and_Tests > LabCorp,3,0
+507,Other_Labs,file,Other laboratory test results,504,Lab_Results_and_Tests,H - Health > Medical_Records > Lab_Results_and_Tests > Other_Labs,3,0
+506,Quest_Diagnostics,file,Quest Diagnostics test results,504,Lab_Results_and_Tests,H - Health > Medical_Records > Lab_Results_and_Tests > Quest_Diagnostics,3,0
+508,Timeline_and_Notes,folder,Chronological medical events and reflections,501,Medical_Records,H - Health > Medical_Records > Timeline_and_Notes,2,0
+509,Medications_and_Supplements,folder,"Current, past, and scheduled intake",500,H - Health,H - Health > Medications_and_Supplements,1,4
+510,Active_Medications,file,Currently prescribed medications,509,Medications_and_Supplements,H - Health > Medications_and_Supplements > Active_Medications,2,0
+513,Dosage_and_Schedule,file,Medication schedules and dosages,509,Medications_and_Supplements,H - Health > Medications_and_Supplements > Dosage_and_Schedule,2,0
+511,Past_Treatments,file,Previous medications and treatments,509,Medications_and_Supplements,H - Health > Medications_and_Supplements > Past_Treatments,2,0
+512,Supplements,file,Vitamins and dietary supplements,509,Medications_and_Supplements,H - Health > Medications_and_Supplements > Supplements,2,0
+518,Mental_Health,folder,"Therapy, emotional tracking, and self-reflection",500,H - Health,H - Health > Mental_Health,1,3
+520,Mood_Tracking,file,Emotional and mood tracking data,518,Mental_Health,H - Health > Mental_Health > Mood_Tracking,2,0
+521,Reflections,file,Personal reflections and journaling,518,Mental_Health,H - Health > Mental_Health > Reflections,2,0
+519,Therapy_Notes,file,Therapy session notes and insights,518,Mental_Health,H - Health > Mental_Health > Therapy_Notes,2,0
+1,P - Personal,folder,"Life, Home, ID, Contacts, Events",,,P - Personal,0,7
+90,Applications,folder,Mobile and desktop applications,1,P - Personal,P - Personal > Applications,1,9
+209,AI_Knowledge_Tools,folder,AI and knowledge tools,90,Applications,P - Personal > Applications > AI_Knowledge_Tools,2,4
+210,ChatGPT,file,ChatGPT AI assistant,209,AI_Knowledge_Tools,P - Personal > Applications > AI_Knowledge_Tools > ChatGPT,3,0
+211,Claude,file,Claude AI assistant,209,AI_Knowledge_Tools,P - Personal > Applications > AI_Knowledge_Tools > Claude,3,0
+212,Perplexity,file,Perplexity AI search,209,AI_Knowledge_Tools,P - Personal > Applications > AI_Knowledge_Tools > Perplexity,3,3
+213,Event_Summaries,folder,Major life event summaries,212,Perplexity,P - Personal > Applications > AI_Knowledge_Tools > Perplexity > Event_Summaries,4,4
+223,Incidents,folder,Incident reports,212,Perplexity,P - Personal > Applications > AI_Knowledge_Tools > Perplexity > Incidents,4,1
+224,Car_Accident_Aqsa_2022,file,Car accident with Aqsa 2022,223,Incidents,P - Personal > Applications > AI_Knowledge_Tools > Perplexity > Incidents > Car_Accident_Aqsa_2022,5,0
+218,Travel,folder,Travel records and accounts,212,Perplexity,P - Personal > Applications > AI_Knowledge_Tools > Perplexity > Travel,4,4
+213,Rewind,file,Rewind AI recorder,209,AI_Knowledge_Tools,P - Personal > Applications > AI_Knowledge_Tools > Rewind,3,4
+217,Car_Accident_2023,file,Car accident 2023,213,Rewind,P - Personal > Applications > AI_Knowledge_Tools > Rewind > Car_Accident_2023,4,1
+216,Eid_2021,file,Eid celebration 2021,213,Rewind,P - Personal > Applications > AI_Knowledge_Tools > Rewind > Eid_2021,4,1
+215,Job_BloodCenter_2019,file,Blood Center job 2019,213,Rewind,P - Personal > Applications > AI_Knowledge_Tools > Rewind > Job_BloodCenter_2019,4,1
+214,Move_NYC_Baltimore_2018,file,Move from NYC to Baltimore 2018,213,Rewind,P - Personal > Applications > AI_Knowledge_Tools > Rewind > Move_NYC_Baltimore_2018,4,1
+197,Entertainment_Media,folder,Entertainment and media apps,90,Applications,P - Personal > Applications > Entertainment_Media,2,2
+206,Devices_Control,folder,Device control apps,197,Entertainment_Media,P - Personal > Applications > Entertainment_Media > Devices_Control,3,2
+208,Apple_TV_Remote,file,Apple TV Remote,206,Devices_Control,P - Personal > Applications > Entertainment_Media > Devices_Control > Apple_TV_Remote,4,0
+207,VIZIO,file,VIZIO TV control,206,Devices_Control,P - Personal > Applications > Entertainment_Media > Devices_Control > VIZIO,4,0
+198,Streaming,folder,Streaming services,197,Entertainment_Media,P - Personal > Applications > Entertainment_Media > Streaming,3,7
+204,Crunchyroll,file,Crunchyroll anime,198,Streaming,P - Personal > Applications > Entertainment_Media > Streaming > Crunchyroll,4,0
+203,Disney_Plus,file,Disney Plus streaming,198,Streaming,P - Personal > Applications > Entertainment_Media > Streaming > Disney_Plus,4,0
+200,Hulu,file,Hulu streaming,198,Streaming,P - Personal > Applications > Entertainment_Media > Streaming > Hulu,4,0
+201,Max,file,Max streaming,198,Streaming,P - Personal > Applications > Entertainment_Media > Streaming > Max,4,0
+199,Netflix,file,Netflix streaming,198,Streaming,P - Personal > Applications > Entertainment_Media > Streaming > Netflix,4,5
+204,Christmas_Items,file,Christmas decorations and items,199,Netflix,P - Personal > Applications > Entertainment_Media > Streaming > Netflix > Christmas_Items,5,0
+201,Decor,file,Home decorations,199,Netflix,P - Personal > Applications > Entertainment_Media > Streaming > Netflix > Decor,5,0
+202,Event_Decor,file,Event decorations,199,Netflix,P - Personal > Applications > Entertainment_Media > Streaming > Netflix > Event_Decor,5,0
+200,Furniture,file,Home furniture,199,Netflix,P - Personal > Applications > Entertainment_Media > Streaming > Netflix > Furniture,5,0
+203,Tools,file,Home tools,199,Netflix,P - Personal > Applications > Entertainment_Media > Streaming > Netflix > Tools,5,0
+202,Prime_Video,file,Prime Video streaming,198,Streaming,P - Personal > Applications > Entertainment_Media > Streaming > Prime_Video,4,0
+205,YouTube,file,YouTube streaming,198,Streaming,P - Personal > Applications > Entertainment_Media > Streaming > YouTube,4,6
+206,AirPods,file,AirPods for sale,205,YouTube,P - Personal > Applications > Entertainment_Media > Streaming > YouTube > AirPods,5,2
+207,Dyson_Vacuum,file,Dyson vacuum for sale,205,YouTube,P - Personal > Applications > Entertainment_Media > Streaming > YouTube > Dyson_Vacuum,5,0
+210,Hats,file,Hats for sale,205,YouTube,P - Personal > Applications > Entertainment_Media > Streaming > YouTube > Hats,5,0
+209,Lights,file,Lights for sale,205,YouTube,P - Personal > Applications > Entertainment_Media > Streaming > YouTube > Lights,5,4
+208,Mirrors,file,Mirrors for sale,205,YouTube,P - Personal > Applications > Entertainment_Media > Streaming > YouTube > Mirrors,5,0
+211,Shoes,file,Shoes for sale,205,YouTube,P - Personal > Applications > Entertainment_Media > Streaming > YouTube > Shoes,5,0
+136,Finance_Payments,folder,Finance and payment apps,90,Applications,P - Personal > Applications > Finance_Payments,2,12
+141,Acorns,file,Acorns investment,136,Finance_Payments,P - Personal > Applications > Finance_Payments > Acorns,3,0
+143,Bank_of_America,file,Bank of America banking,136,Finance_Payments,P - Personal > Applications > Finance_Payments > Bank_of_America,3,0
+137,Cash_App,file,Cash App payments,136,Finance_Payments,P - Personal > Applications > Finance_Payments > Cash_App,3,0
+137,Credentials,file,Credit One credentials,136,Finance_Payments,P - Personal > Applications > Finance_Payments > Credentials,3,0
+139,PayPal,file,PayPal payments,136,Finance_Payments,P - Personal > Applications > Finance_Payments > PayPal,3,1
+140,Credentials,file,Indigo credentials,139,PayPal,P - Personal > Applications > Finance_Payments > PayPal > Credentials,4,0
+146,Plaid,file,Plaid financial data,136,Finance_Payments,P - Personal > Applications > Finance_Payments > Plaid,3,5
+149,Car_HondaFS,folder,Honda Financial Services,146,Plaid,P - Personal > Applications > Finance_Payments > Plaid > Car_HondaFS,4,10
+163,Insurance_Allstate,folder,Allstate insurance,146,Plaid,P - Personal > Applications > Finance_Payments > Plaid > Insurance_Allstate,4,1
+160,Phone_ATT,folder,AT&T phone service,146,Plaid,P - Personal > Applications > Finance_Payments > Plaid > Phone_ATT,4,1
+147,Rent_HOA,folder,Rent and HOA payments,146,Plaid,P - Personal > Applications > Finance_Payments > Plaid > Rent_HOA,4,1
+152,Utilities,folder,Utility accounts,146,Plaid,P - Personal > Applications > Finance_Payments > Plaid > Utilities,4,3
+140,Rocket_Money,file,Rocket Money finance,136,Finance_Payments,P - Personal > Applications > Finance_Payments > Rocket_Money,3,0
+147,SquareUp,file,Square payment processing,136,Finance_Payments,P - Personal > Applications > Finance_Payments > SquareUp,3,1
+148,Payment_Records,file,Rent and HOA payment records,147,SquareUp,P - Personal > Applications > Finance_Payments > SquareUp > Payment_Records,4,3
+138,Venmo,file,Venmo payments,136,Finance_Payments,P - Personal > Applications > Finance_Payments > Venmo,3,0
+142,Wells_Fargo,file,Wells Fargo banking,136,Finance_Payments,P - Personal > Applications > Finance_Payments > Wells_Fargo,3,1
+143,Account_Info,file,Nordstrom account information,142,Wells_Fargo,P - Personal > Applications > Finance_Payments > Wells_Fargo > Account_Info,4,0
+144,Western_Union,file,Western Union transfers,136,Finance_Payments,P - Personal > Applications > Finance_Payments > Western_Union,3,1
+145,Account_Info,file,Synchrony account information,144,Western_Union,P - Personal > Applications > Finance_Payments > Western_Union > Account_Info,4,0
+145,Zelle,file,Zelle payments,136,Finance_Payments,P - Personal > Applications > Finance_Payments > Zelle,3,0
+180,Health_Fitness,folder,Health and fitness apps,90,Applications,P - Personal > Applications > Health_Fitness,2,10
+182,BetterSleep,file,BetterSleep app,180,Health_Fitness,P - Personal > Applications > Health_Fitness > BetterSleep,3,7
+188,CashApp,file,Cash App,182,BetterSleep,P - Personal > Applications > Health_Fitness > BetterSleep > CashApp,4,0
+186,PayPal,file,PayPal account,182,BetterSleep,P - Personal > Applications > Health_Fitness > BetterSleep > PayPal,4,0
+184,Plaid,file,Plaid financial data,182,BetterSleep,P - Personal > Applications > Health_Fitness > BetterSleep > Plaid,4,0
+183,RocketMoney,file,Rocket Money app,182,BetterSleep,P - Personal > Applications > Health_Fitness > BetterSleep > RocketMoney,4,0
+189,SquareUp,file,Square payment processing,182,BetterSleep,P - Personal > Applications > Health_Fitness > BetterSleep > SquareUp,4,0
+187,Venmo,file,Venmo payment app,182,BetterSleep,P - Personal > Applications > Health_Fitness > BetterSleep > Venmo,4,0
+185,Zelle,file,Zelle payment app,182,BetterSleep,P - Personal > Applications > Health_Fitness > BetterSleep > Zelle,4,0
+189,Elevate,file,Elevate brain training,180,Health_Fitness,P - Personal > Applications > Health_Fitness > Elevate,3,0
+188,Go_Kinetic,file,Go Kinetic fitness,180,Health_Fitness,P - Personal > Applications > Health_Fitness > Go_Kinetic,3,0
+185,Healow,file,Healow health app,180,Health_Fitness,P - Personal > Applications > Health_Fitness > Healow,3,0
+186,Life_Time,file,Life Time fitness,180,Health_Fitness,P - Personal > Applications > Health_Fitness > Life_Time,3,0
+181,MyChart,file,MyChart health portal,180,Health_Fitness,P - Personal > Applications > Health_Fitness > MyChart,3,0
+184,Noji,file,Noji health app,180,Health_Fitness,P - Personal > Applications > Health_Fitness > Noji,3,0
+183,PT_Solutions,file,PT Solutions,180,Health_Fitness,P - Personal > Applications > Health_Fitness > PT_Solutions,3,0
+190,Think_Dirty,file,Think Dirty product scanner,180,Health_Fitness,P - Personal > Applications > Health_Fitness > Think_Dirty,3,3
+191,Electronics,folder,Electronic devices and accessories,190,Think_Dirty,P - Personal > Applications > Health_Fitness > Think_Dirty > Electronics,4,12
+199,Home_Storage,folder,Home storage and furniture,190,Think_Dirty,P - Personal > Applications > Health_Fitness > Think_Dirty > Home_Storage,4,5
+205,Sell_List,folder,Items to sell,190,Think_Dirty,P - Personal > Applications > Health_Fitness > Think_Dirty > Sell_List,4,6
+187,Weight_Gurus,file,Weight Gurus,180,Health_Fitness,P - Personal > Applications > Health_Fitness > Weight_Gurus,3,0
+191,Learning_Self_Improvement,folder,Learning and self-improvement apps,90,Applications,P - Personal > Applications > Learning_Self_Improvement,2,12
+194,Apple_Watch,file,Apple Watch,191,Learning_Self_Improvement,P - Personal > Applications > Learning_Self_Improvement > Apple_Watch,3,0
+194,Brilliant,file,Brilliant learning platform,191,Learning_Self_Improvement,P - Personal > Applications > Learning_Self_Improvement > Brilliant,3,0
+192,Duolingo,file,Duolingo language learning,191,Learning_Self_Improvement,P - Personal > Applications > Learning_Self_Improvement > Duolingo,3,0
+196,Information_Reading,file,Information and reading apps,191,Learning_Self_Improvement,P - Personal > Applications > Learning_Self_Improvement > Information_Reading,3,0
+193,iPhone15,file,iPhone 15,191,Learning_Self_Improvement,P - Personal > Applications > Learning_Self_Improvement > iPhone15,3,0
+198,iXpand,file,iXpand device,191,Learning_Self_Improvement,P - Personal > Applications > Learning_Self_Improvement > iXpand,3,7
+195,LG_34_Monitor,file,LG 34-inch monitor,191,Learning_Self_Improvement,P - Personal > Applications > Learning_Self_Improvement > LG_34_Monitor,3,0
+192,MacBook,file,MacBook computer,191,Learning_Self_Improvement,P - Personal > Applications > Learning_Self_Improvement > MacBook,3,0
+193,Mimo,file,Mimo coding app,191,Learning_Self_Improvement,P - Personal > Applications > Learning_Self_Improvement > Mimo,3,0
+195,Quizgecko,file,Quizgecko quiz platform,191,Learning_Self_Improvement,P - Personal > Applications > Learning_Self_Improvement > Quizgecko,3,0
+197,Tile,file,Tile tracking device,191,Learning_Self_Improvement,P - Personal > Applications > Learning_Self_Improvement > Tile,3,2
+196,ZMUIPNG_Hub,file,ZMUIPNG hub,191,Learning_Self_Improvement,P - Personal > Applications > Learning_Self_Improvement > ZMUIPNG_Hub,3,0
+169,Navigation_Travel,folder,Navigation and travel apps,90,Applications,P - Personal > Applications > Navigation_Travel,2,2
+177,Housing_Weather,folder,Housing and weather apps,169,Navigation_Travel,P - Personal > Applications > Navigation_Travel > Housing_Weather,3,2
+178,Apartments_App,file,Apartments.com app,177,Housing_Weather,P - Personal > Applications > Navigation_Travel > Housing_Weather > Apartments_App,4,0
+179,Weather,file,Weather applications,177,Housing_Weather,P - Personal > Applications > Navigation_Travel > Housing_Weather > Weather,4,0
+170,Maps_Transport,folder,Maps and transportation,169,Navigation_Travel,P - Personal > Applications > Navigation_Travel > Maps_Transport,3,9
+172,Apple_Maps,file,Apple Maps,170,Maps_Transport,P - Personal > Applications > Navigation_Travel > Maps_Transport > Apple_Maps,4,0
+172,Citizens_Apple,file,Citizens Apple loan,170,Maps_Transport,P - Personal > Applications > Navigation_Travel > Maps_Transport > Citizens_Apple,4,0
+173,Federal_Student_Aid,file,Federal student aid,170,Maps_Transport,P - Personal > Applications > Navigation_Travel > Maps_Transport > Federal_Student_Aid,4,0
+171,Google_Maps,file,Google Maps,170,Maps_Transport,P - Personal > Applications > Navigation_Travel > Maps_Transport > Google_Maps,4,0
+171,HondaFS,file,Honda Financial Services loan,170,Maps_Transport,P - Personal > Applications > Navigation_Travel > Maps_Transport > HondaFS,4,0
+176,Lyft,file,Lyft rideshare,170,Maps_Transport,P - Personal > Applications > Navigation_Travel > Maps_Transport > Lyft,4,5
+180,Apple,file,Apple refunds and services,176,Lyft,P - Personal > Applications > Navigation_Travel > Maps_Transport > Lyft > Apple,5,10
+179,AT&T,file,AT&T refunds and services,176,Lyft,P - Personal > Applications > Navigation_Travel > Maps_Transport > Lyft > AT&T,5,0
+181,Nike_Ross_HandAndStone,file,"Nike, Ross, Hand and Stone refunds",176,Lyft,P - Personal > Applications > Navigation_Travel > Maps_Transport > Lyft > Nike_Ross_HandAndStone,5,0
+178,Target,file,Target refunds and services,176,Lyft,P - Personal > Applications > Navigation_Travel > Maps_Transport > Lyft > Target,5,0
+177,Walmart,file,Walmart refunds and services,176,Lyft,P - Personal > Applications > Navigation_Travel > Maps_Transport > Lyft > Walmart,5,2
+174,ParkMobile,file,ParkMobile parking,170,Maps_Transport,P - Personal > Applications > Navigation_Travel > Maps_Transport > ParkMobile,4,1
+175,Lexington_Law,file,Lexington Law credit repair,174,ParkMobile,P - Personal > Applications > Navigation_Travel > Maps_Transport > ParkMobile > Lexington_Law,5,0
+175,Uber,file,Uber rideshare,170,Maps_Transport,P - Personal > Applications > Navigation_Travel > Maps_Transport > Uber,4,0
+173,Yandex_Maps,file,Yandex Maps,170,Maps_Transport,P - Personal > Applications > Navigation_Travel > Maps_Transport > Yandex_Maps,4,0
+117,Productivity_Organization,folder,Productivity and organization apps,90,Applications,P - Personal > Applications > Productivity_Organization,2,3
+130,Automation_Tools,folder,Automation and productivity tools,117,Productivity_Organization,P - Personal > Applications > Productivity_Organization > Automation_Tools,3,5
+135,Fireflies,file,Fireflies AI meeting assistant,130,Automation_Tools,P - Personal > Applications > Productivity_Organization > Automation_Tools > Fireflies,4,4
+136,Credit_One,folder,Credit One card,135,Fireflies,P - Personal > Applications > Productivity_Organization > Automation_Tools > Fireflies > Credit_One,5,12
+139,Indigo,folder,Indigo card,135,Fireflies,P - Personal > Applications > Productivity_Organization > Automation_Tools > Fireflies > Indigo,5,1
+142,Nordstrom,folder,Nordstrom card,135,Fireflies,P - Personal > Applications > Productivity_Organization > Automation_Tools > Fireflies > Nordstrom,5,1
+144,Synchrony,folder,Synchrony card,135,Fireflies,P - Personal > Applications > Productivity_Organization > Automation_Tools > Fireflies > Synchrony,5,1
+131,IFTTT,file,IFTTT automation,130,Automation_Tools,P - Personal > Applications > Productivity_Organization > Automation_Tools > IFTTT,4,0
+134,Pythonista,file,Pythonista Python IDE,130,Automation_Tools,P - Personal > Applications > Productivity_Organization > Automation_Tools > Pythonista,4,0
+133,Scriptable,file,Scriptable automation,130,Automation_Tools,P - Personal > Applications > Productivity_Organization > Automation_Tools > Scriptable,4,0
+132,Shortcuts,file,Apple Shortcuts,130,Automation_Tools,P - Personal > Applications > Productivity_Organization > Automation_Tools > Shortcuts,4,1
+133,Credentials,file,American Express credentials,132,Shortcuts,P - Personal > Applications > Productivity_Organization > Automation_Tools > Shortcuts > Credentials,5,0
+118,Planning_Notes,folder,Planning and note-taking apps,117,Productivity_Organization,P - Personal > Applications > Productivity_Organization > Planning_Notes,3,8
+121,Apple_Notes,file,Apple Notes app,118,Planning_Notes,P - Personal > Applications > Productivity_Organization > Planning_Notes > Apple_Notes,4,0
+124,Calendar,file,Calendar applications,118,Planning_Notes,P - Personal > Applications > Productivity_Organization > Planning_Notes > Calendar,4,0
+119,Credentials,file,Visa credentials,118,Planning_Notes,P - Personal > Applications > Productivity_Organization > Planning_Notes > Credentials,4,0
+121,Data,folder,Visa statements and data,118,Planning_Notes,P - Personal > Applications > Productivity_Organization > Planning_Notes > Data,4,0
+122,Google_Tasks,file,Google Tasks,118,Planning_Notes,P - Personal > Applications > Productivity_Organization > Planning_Notes > Google_Tasks,4,1
+123,Credentials,file,Travel rewards Visa credentials,122,Google_Tasks,P - Personal > Applications > Productivity_Organization > Planning_Notes > Google_Tasks > Credentials,5,0
+119,Notion,file,Notion workspace,118,Planning_Notes,P - Personal > Applications > Productivity_Organization > Planning_Notes > Notion,4,0
+120,Obsidian,file,Obsidian note-taking,118,Planning_Notes,P - Personal > Applications > Productivity_Organization > Planning_Notes > Obsidian,4,0
+123,Reminders,file,Apple Reminders,118,Planning_Notes,P - Personal > Applications > Productivity_Organization > Planning_Notes > Reminders,4,0
+125,Project_Management,folder,Project management and collaboration,117,Productivity_Organization,P - Personal > Applications > Productivity_Organization > Project_Management,3,6
+126,Asana,file,Asana project management,125,Project_Management,P - Personal > Applications > Productivity_Organization > Project_Management > Asana,4,0
+126,Credentials,file,Wells Fargo credentials,125,Project_Management,P - Personal > Applications > Productivity_Organization > Project_Management > Credentials,4,0
+128,Data,folder,Wells Fargo statements and backups,125,Project_Management,P - Personal > Applications > Productivity_Organization > Project_Management > Data,4,0
+128,GitHub,file,GitHub development platform,125,Project_Management,P - Personal > Applications > Productivity_Organization > Project_Management > GitHub,4,0
+129,Google_Cloud,file,Google Cloud platform,125,Project_Management,P - Personal > Applications > Productivity_Organization > Project_Management > Google_Cloud,4,1
+130,Credentials,file,Chase credentials,129,Google_Cloud,P - Personal > Applications > Productivity_Organization > Project_Management > Google_Cloud > Credentials,5,5
+127,Miro,file,Miro collaboration platform,125,Project_Management,P - Personal > Applications > Productivity_Organization > Project_Management > Miro,4,0
+148,Shopping_Rewards,folder,Shopping and rewards apps,90,Applications,P - Personal > Applications > Shopping_Rewards,2,3
+159,Food_Coffee,folder,Food and coffee apps,148,Shopping_Rewards,P - Personal > Applications > Shopping_Rewards > Food_Coffee,3,5
+160,Chick_fil_A,file,Chick-fil-A app,159,Food_Coffee,P - Personal > Applications > Shopping_Rewards > Food_Coffee > Chick_fil_A,4,1
+161,Credentials,file,AT&T credentials,160,Chick_fil_A,P - Personal > Applications > Shopping_Rewards > Food_Coffee > Chick_fil_A > Credentials,5,0
+163,DoorDash,file,DoorDash food delivery,159,Food_Coffee,P - Personal > Applications > Shopping_Rewards > Food_Coffee > DoorDash,4,1
+164,Credentials,file,Allstate credentials,163,DoorDash,P - Personal > Applications > Shopping_Rewards > Food_Coffee > DoorDash > Credentials,5,0
+161,Dutch_Bros,file,Dutch Bros coffee,159,Food_Coffee,P - Personal > Applications > Shopping_Rewards > Food_Coffee > Dutch_Bros,4,0
+162,Starbucks,file,Starbucks coffee,159,Food_Coffee,P - Personal > Applications > Shopping_Rewards > Food_Coffee > Starbucks,4,0
+164,Uber_Eats,file,Uber Eats delivery,159,Food_Coffee,P - Personal > Applications > Shopping_Rewards > Food_Coffee > Uber_Eats,4,0
+149,Retail,folder,Retail shopping apps,148,Shopping_Rewards,P - Personal > Applications > Shopping_Rewards > Retail,3,10
+150,Amazon,file,Amazon shopping,149,Retail,P - Personal > Applications > Shopping_Rewards > Retail > Amazon,4,0
+150,Credentials,file,Honda FS credentials,149,Retail,P - Personal > Applications > Shopping_Rewards > Retail > Credentials,4,0
+156,eBay,file,eBay marketplace,149,Retail,P - Personal > Applications > Shopping_Rewards > Retail > eBay,4,1
+157,Account_Info,file,PSO electric account information,156,eBay,P - Personal > Applications > Shopping_Rewards > Retail > eBay > Account_Info,5,0
+158,Etsy,file,Etsy marketplace,149,Retail,P - Personal > Applications > Shopping_Rewards > Retail > Etsy,4,1
+159,Account_Info,file,ONG gas account information,158,Etsy,P - Personal > Applications > Shopping_Rewards > Retail > Etsy > Account_Info,5,5
+154,Home_Depot,file,Home Depot,149,Retail,P - Personal > Applications > Shopping_Rewards > Retail > Home_Depot,4,0
+153,Lowes,file,Lowe's home improvement,149,Retail,P - Personal > Applications > Shopping_Rewards > Retail > Lowes,4,1
+154,Credentials,file,Minol water credentials,153,Lowes,P - Personal > Applications > Shopping_Rewards > Retail > Lowes > Credentials,5,0
+155,Office_Depot,file,Office Depot,149,Retail,P - Personal > Applications > Shopping_Rewards > Retail > Office_Depot,4,0
+152,Target,file,Target shopping,149,Retail,P - Personal > Applications > Shopping_Rewards > Retail > Target,4,3
+156,Electric_PSO,folder,PSO electric service,152,Target,P - Personal > Applications > Shopping_Rewards > Retail > Target > Electric_PSO,5,1
+158,Gas_ONG,folder,ONG gas service,152,Target,P - Personal > Applications > Shopping_Rewards > Retail > Target > Gas_ONG,5,1
+153,Water_Minol,folder,Minol water service,152,Target,P - Personal > Applications > Shopping_Rewards > Retail > Target > Water_Minol,5,1
+157,Temu,file,Temu shopping,149,Retail,P - Personal > Applications > Shopping_Rewards > Retail > Temu,4,0
+151,Walmart,file,Walmart shopping,149,Retail,P - Personal > Applications > Shopping_Rewards > Retail > Walmart,4,0
+165,Shipping_Tracking,folder,Shipping and tracking apps,148,Shopping_Rewards,P - Personal > Applications > Shopping_Rewards > Shipping_Tracking,3,3
+167,FedEx,file,FedEx shipping,165,Shipping_Tracking,P - Personal > Applications > Shopping_Rewards > Shipping_Tracking > FedEx,4,2
+169,CreditKarma,file,CreditKarma report,167,FedEx,P - Personal > Applications > Shopping_Rewards > Shipping_Tracking > FedEx > CreditKarma,5,2
+168,Experian,file,Experian credit report,167,FedEx,P - Personal > Applications > Shopping_Rewards > Shipping_Tracking > FedEx > Experian,5,0
+166,UPS,file,UPS shipping,165,Shipping_Tracking,P - Personal > Applications > Shopping_Rewards > Shipping_Tracking > UPS,4,3
+174,Credit_Repair,folder,Credit repair services,166,UPS,P - Personal > Applications > Shopping_Rewards > Shipping_Tracking > UPS > Credit_Repair,5,1
+170,Loans,folder,Active loans,166,UPS,P - Personal > Applications > Shopping_Rewards > Shipping_Tracking > UPS > Loans,5,9
+167,Reports,folder,Credit reports,166,UPS,P - Personal > Applications > Shopping_Rewards > Shipping_Tracking > UPS > Reports,5,2
+168,USPS_Mobile,file,USPS Mobile,165,Shipping_Tracking,P - Personal > Applications > Shopping_Rewards > Shipping_Tracking > USPS_Mobile,4,0
+91,Social_Community,folder,Social media and community apps,90,Applications,P - Personal > Applications > Social_Community,2,3
+101,Communities_Groups,folder,Community and group platforms,91,Social_Community,P - Personal > Applications > Social_Community > Communities_Groups,3,8
+106,Eventbrite,file,Eventbrite event platform,101,Communities_Groups,P - Personal > Applications > Social_Community > Communities_Groups > Eventbrite,4,0
+109,Faves,file,Faves community app,101,Communities_Groups,P - Personal > Applications > Social_Community > Communities_Groups > Faves,4,0
+107,LinkedIn_Events,file,LinkedIn Events,101,Communities_Groups,P - Personal > Applications > Social_Community > Communities_Groups > LinkedIn_Events,4,0
+105,Meetup,file,Meetup event platform,101,Communities_Groups,P - Personal > Applications > Social_Community > Communities_Groups > Meetup,4,0
+108,Meta_Events,file,Meta Events,101,Communities_Groups,P - Personal > Applications > Social_Community > Communities_Groups > Meta_Events,4,0
+103,Mighty,file,Mighty community platform,101,Communities_Groups,P - Personal > Applications > Social_Community > Communities_Groups > Mighty,4,0
+104,Reddit,file,Reddit social platform,101,Communities_Groups,P - Personal > Applications > Social_Community > Communities_Groups > Reddit,4,0
+102,Skool,file,Skool community platform,101,Communities_Groups,P - Personal > Applications > Social_Community > Communities_Groups > Skool,4,0
+92,Direct_Messaging,folder,Direct messaging applications,91,Social_Community,P - Personal > Applications > Social_Community > Direct_Messaging,3,8
+99,Discord,file,Discord chat platform,92,Direct_Messaging,P - Personal > Applications > Social_Community > Direct_Messaging > Discord,4,0
+98,Facebook_Messenger,file,Facebook Messenger,92,Direct_Messaging,P - Personal > Applications > Social_Community > Direct_Messaging > Facebook_Messenger,4,0
+94,FaceTime,file,Apple FaceTime,92,Direct_Messaging,P - Personal > Applications > Social_Community > Direct_Messaging > FaceTime,4,0
+93,iMessage,file,Apple iMessage,92,Direct_Messaging,P - Personal > Applications > Social_Community > Direct_Messaging > iMessage,4,0
+100,Slack,file,Slack workspace communication,92,Direct_Messaging,P - Personal > Applications > Social_Community > Direct_Messaging > Slack,4,0
+96,TextFree,file,TextFree messaging app,92,Direct_Messaging,P - Personal > Applications > Social_Community > Direct_Messaging > TextFree,4,0
+95,TextMe,file,TextMe messaging app,92,Direct_Messaging,P - Personal > Applications > Social_Community > Direct_Messaging > TextMe,4,0
+97,WhatsApp,file,WhatsApp messaging,92,Direct_Messaging,P - Personal > Applications > Social_Community > Direct_Messaging > WhatsApp,4,0
+110,Social_Media,folder,Social media platforms,91,Social_Community,P - Personal > Applications > Social_Community > Social_Media,3,6
+114,Facebook,file,Facebook social platform,110,Social_Media,P - Personal > Applications > Social_Community > Social_Media > Facebook,4,1
+117,Data,folder,Statements and backups,114,Facebook,P - Personal > Applications > Social_Community > Social_Media > Facebook > Data,5,3
+111,Instagram,file,Instagram social platform,110,Social_Media,P - Personal > Applications > Social_Community > Social_Media > Instagram,4,4
+146,Bills_Payments,folder,Monthly bills and payments,111,Instagram,P - Personal > Applications > Social_Community > Social_Media > Instagram > Bills_Payments,5,5
+166,Credit_Debt,folder,Credit reports and debt management,111,Instagram,P - Personal > Applications > Social_Community > Social_Media > Instagram > Credit_Debt,5,3
+182,Financial_Tools,folder,Financial management tools,111,Instagram,P - Personal > Applications > Social_Community > Social_Media > Instagram > Financial_Tools,5,7
+176,Refunds_Service_Logs,folder,Refund and service request logs,111,Instagram,P - Personal > Applications > Social_Community > Social_Media > Instagram > Refunds_Service_Logs,5,5
+113,Snapchat,file,Snapchat messaging,110,Social_Media,P - Personal > Applications > Social_Community > Social_Media > Snapchat,4,2
+122,Travel_Rewards_Visa,folder,Travel rewards Visa card,113,Snapchat,P - Personal > Applications > Social_Community > Social_Media > Snapchat > Travel_Rewards_Visa,5,1
+118,Visa,folder,Visa credit card,113,Snapchat,P - Personal > Applications > Social_Community > Social_Media > Snapchat > Visa,5,8
+116,Threads,file,Threads social platform,110,Social_Media,P - Personal > Applications > Social_Community > Social_Media > Threads,4,0
+112,TikTok,file,TikTok video platform,110,Social_Media,P - Personal > Applications > Social_Community > Social_Media > TikTok,4,4
+132,American_Express,folder,American Express account,112,TikTok,P - Personal > Applications > Social_Community > Social_Media > TikTok > American_Express,5,1
+129,Chase,folder,Chase account,112,TikTok,P - Personal > Applications > Social_Community > Social_Media > TikTok > Chase,5,1
+135,Other_Cards,folder,Additional credit cards,112,TikTok,P - Personal > Applications > Social_Community > Social_Media > TikTok > Other_Cards,5,4
+125,Wells_Fargo,folder,Wells Fargo account,112,TikTok,P - Personal > Applications > Social_Community > Social_Media > TikTok > Wells_Fargo,5,6
+115,YouTube,file,YouTube video platform,110,Social_Media,P - Personal > Applications > Social_Community > Social_Media > YouTube,4,0
+190,Assets_Inventory,folder,Personal assets and inventory,1,P - Personal,P - Personal > Assets_Inventory,1,3
+27,Contacts_Network,folder,Personal and professional connections,1,P - Personal,P - Personal > Contacts_Network,1,3
+28,Family,folder,Family member profiles,27,Contacts_Network,P - Personal > Contacts_Network > Family,2,4
+67,Attributes,folder,Relationship metadata,28,Family,P - Personal > Contacts_Network > Family > Attributes,3,5
+68,Connection_Type,file,,67,Attributes,P - Personal > Contacts_Network > Family > Attributes > Connection_Type,4,0
+70,Contact_Frequency,file,,67,Attributes,P - Personal > Contacts_Network > Family > Attributes > Contact_Frequency,4,0
+69,Residence_Status,file,,67,Attributes,P - Personal > Contacts_Network > Family > Attributes > Residence_Status,4,0
+72,Shared_Responsibilities,file,,67,Attributes,P - Personal > Contacts_Network > Family > Attributes > Shared_Responsibilities,4,0
+71,Support_Role,file,,67,Attributes,P - Personal > Contacts_Network > Family > Attributes > Support_Role,4,0
+30,Extended,folder,Extended family members,28,Family,P - Personal > Contacts_Network > Family > Extended,3,6
+52,Brother_in_Law,file,Brother-in-law's profile,30,Extended,P - Personal > Contacts_Network > Family > Extended > Brother_in_Law,4,2
+53,Brother_in_Law_Notes,file,Notes about Brother-in-law,52,Brother_in_Law,P - Personal > Contacts_Network > Family > Extended > Brother_in_Law > Brother_in_Law_Notes,5,0
+54,Brother_in_Law_Photos,file,Photos of Brother-in-law,52,Brother_in_Law,P - Personal > Contacts_Network > Family > Extended > Brother_in_Law > Brother_in_Law_Photos,5,0
+55,Nephew,file,Nephew's profile (Brother + Sister-in-law's child),30,Extended,P - Personal > Contacts_Network > Family > Extended > Nephew,4,2
+56,Nephew_Notes,file,Notes about Nephew,55,Nephew,P - Personal > Contacts_Network > Family > Extended > Nephew > Nephew_Notes,5,0
+57,Nephew_Photos,file,Photos of Nephew,55,Nephew,P - Personal > Contacts_Network > Family > Extended > Nephew > Nephew_Photos,5,0
+64,Nephew_2,file,Second nephew's profile (Sister + Brother-in-law's children),30,Extended,P - Personal > Contacts_Network > Family > Extended > Nephew_2,4,2
+65,Nephew_2_Notes,file,Notes about Nephew 2,64,Nephew_2,P - Personal > Contacts_Network > Family > Extended > Nephew_2 > Nephew_2_Notes,5,0
+66,Nephew_2_Photos,file,Photos of Nephew 2,64,Nephew_2,P - Personal > Contacts_Network > Family > Extended > Nephew_2 > Nephew_2_Photos,5,0
+58,Niece_1,file,First niece's profile,30,Extended,P - Personal > Contacts_Network > Family > Extended > Niece_1,4,2
+59,Niece_1_Notes,file,Notes about Niece 1,58,Niece_1,P - Personal > Contacts_Network > Family > Extended > Niece_1 > Niece_1_Notes,5,0
+60,Niece_1_Photos,file,Photos of Niece 1,58,Niece_1,P - Personal > Contacts_Network > Family > Extended > Niece_1 > Niece_1_Photos,5,0
+61,Niece_2,file,Second niece's profile,30,Extended,P - Personal > Contacts_Network > Family > Extended > Niece_2,4,2
+62,Niece_2_Notes,file,Notes about Niece 2,61,Niece_2,P - Personal > Contacts_Network > Family > Extended > Niece_2 > Niece_2_Notes,5,0
+63,Niece_2_Photos,file,Photos of Niece 2,61,Niece_2,P - Personal > Contacts_Network > Family > Extended > Niece_2 > Niece_2_Photos,5,0
+49,Sister_in_Law,file,Sister-in-law's profile,30,Extended,P - Personal > Contacts_Network > Family > Extended > Sister_in_Law,4,2
+50,Sister_in_Law_Notes,file,Notes about Sister-in-law,49,Sister_in_Law,P - Personal > Contacts_Network > Family > Extended > Sister_in_Law > Sister_in_Law_Notes,5,0
+51,Sister_in_Law_Photos,file,Photos of Sister-in-law,49,Sister_in_Law,P - Personal > Contacts_Network > Family > Extended > Sister_in_Law > Sister_in_Law_Photos,5,0
+73,Groups,folder,Relationship clusters auto-generated by assistant,28,Family,P - Personal > Contacts_Network > Family > Groups,3,5
+78,"Extended (Uncles, aunts, cousins – optional future expansion)",file,,73,Groups,"P - Personal > Contacts_Network > Family > Groups > Extended (Uncles, aunts, cousins – optional future expansion)",4,0
+76,"In_Laws (Sister_in_Law, Brother_in_Law)",file,,73,Groups,"P - Personal > Contacts_Network > Family > Groups > In_Laws (Sister_in_Law, Brother_in_Law)",4,0
+77,Kids (All nieces and nephews),file,,73,Groups,P - Personal > Contacts_Network > Family > Groups > Kids (All nieces and nephews),4,0
+74,"Parents (Mom, Dad, Stepmom)",file,,73,Groups,"P - Personal > Contacts_Network > Family > Groups > Parents (Mom, Dad, Stepmom)",4,0
+75,"Siblings (Sister, Brother, Sister_2)",file,,73,Groups,"P - Personal > Contacts_Network > Family > Groups > Siblings (Sister, Brother, Sister_2)",4,0
+29,Immediate,folder,Immediate family members,28,Family,P - Personal > Contacts_Network > Family > Immediate,3,6
+43,Brother,file,Brother's profile,29,Immediate,P - Personal > Contacts_Network > Family > Immediate > Brother,4,2
+44,Brother_Notes,file,Notes about Brother,43,Brother,P - Personal > Contacts_Network > Family > Immediate > Brother > Brother_Notes,5,0
+45,Brother_Photos,file,Photos of Brother,43,Brother,P - Personal > Contacts_Network > Family > Immediate > Brother > Brother_Photos,5,0
+34,Dad,file,Father's profile,29,Immediate,P - Personal > Contacts_Network > Family > Immediate > Dad,4,2
+35,Dad_Notes,file,Notes about Dad,34,Dad,P - Personal > Contacts_Network > Family > Immediate > Dad > Dad_Notes,5,0
+36,Dad_Photos,file,Photos of Dad,34,Dad,P - Personal > Contacts_Network > Family > Immediate > Dad > Dad_Photos,5,0
+31,Mom,file,Mother's profile,29,Immediate,P - Personal > Contacts_Network > Family > Immediate > Mom,4,2
+32,Mom_Notes,file,Notes about Mom,31,Mom,P - Personal > Contacts_Network > Family > Immediate > Mom > Mom_Notes,5,0
+33,Mom_Photos,file,Photos of Mom,31,Mom,P - Personal > Contacts_Network > Family > Immediate > Mom > Mom_Photos,5,0
+40,Sister,file,Sister's profile,29,Immediate,P - Personal > Contacts_Network > Family > Immediate > Sister,4,2
+41,Sister_Notes,file,Notes about Sister,40,Sister,P - Personal > Contacts_Network > Family > Immediate > Sister > Sister_Notes,5,0
+42,Sister_Photos,file,Photos of Sister,40,Sister,P - Personal > Contacts_Network > Family > Immediate > Sister > Sister_Photos,5,0
+46,Sister_2,file,Second sister's profile,29,Immediate,P - Personal > Contacts_Network > Family > Immediate > Sister_2,4,2
+47,Sister_2_Notes,file,Notes about Sister 2,46,Sister_2,P - Personal > Contacts_Network > Family > Immediate > Sister_2 > Sister_2_Notes,5,0
+48,Sister_2_Photos,file,Photos of Sister 2,46,Sister_2,P - Personal > Contacts_Network > Family > Immediate > Sister_2 > Sister_2_Photos,5,0
+37,Stepmom,file,Stepmother's profile,29,Immediate,P - Personal > Contacts_Network > Family > Immediate > Stepmom,4,2
+38,Stepmom_Notes,file,Notes about Stepmom,37,Stepmom,P - Personal > Contacts_Network > Family > Immediate > Stepmom > Stepmom_Notes,5,0
+39,Stepmom_Photos,file,Photos of Stepmom,37,Stepmom,P - Personal > Contacts_Network > Family > Immediate > Stepmom > Stepmom_Photos,5,0
+79,Friends,folder,Personal friendships and social connections,27,Contacts_Network,P - Personal > Contacts_Network > Friends,2,6
+80,Childhood,folder,Friends from childhood,79,Friends,P - Personal > Contacts_Network > Friends > Childhood,3,0
+82,College,folder,College friends,79,Friends,P - Personal > Contacts_Network > Friends > College,3,0
+85,Current_Acquaintances,folder,Current social acquaintances,79,Friends,P - Personal > Contacts_Network > Friends > Current_Acquaintances,3,0
+83,Events,folder,"Friends from events (SpaceApps, NASA, etc.)",79,Friends,P - Personal > Contacts_Network > Friends > Events,3,0
+81,High_School,folder,High school friends,79,Friends,P - Personal > Contacts_Network > Friends > High_School,3,0
+84,Religious_Community,folder,Muslim Network and religious community,79,Friends,P - Personal > Contacts_Network > Friends > Religious_Community,3,0
+86,Professional_Network,folder,Professional connections and colleagues,27,Contacts_Network,P - Personal > Contacts_Network > Professional_Network,2,3
+89,Clients,folder,Professional clients and business contacts,86,Professional_Network,P - Personal > Contacts_Network > Professional_Network > Clients,3,0
+88,Collaborators,folder,Professional collaborators and partners,86,Professional_Network,P - Personal > Contacts_Network > Professional_Network > Collaborators,3,0
+87,Mentors,folder,Professional mentors and advisors,86,Professional_Network,P - Personal > Contacts_Network > Professional_Network > Mentors,3,0
+225,Daily_Life_Digital_Presence,folder,Digital accounts and daily life,1,P - Personal,P - Personal > Daily_Life_Digital_Presence,1,5
+228,Email_Accounts,folder,Email account management,225,Daily_Life_Digital_Presence,P - Personal > Daily_Life_Digital_Presence > Email_Accounts,2,4
+229,Apple_IDs,folder,Apple ID accounts,228,Email_Accounts,P - Personal > Daily_Life_Digital_Presence > Email_Accounts > Apple_IDs,3,2
+231,Other_IDs,file,Other Apple IDs,229,Apple_IDs,P - Personal > Daily_Life_Digital_Presence > Email_Accounts > Apple_IDs > Other_IDs,4,0
+230,Zainkhan5@yahoo.com,file,Primary Yahoo email,229,Apple_IDs,P - Personal > Daily_Life_Digital_Presence > Email_Accounts > Apple_IDs > Zainkhan5@yahoo.com,4,0
+232,Gmail,file,Gmail account,228,Email_Accounts,P - Personal > Daily_Life_Digital_Presence > Email_Accounts > Gmail,3,0
+233,Outlook,file,Outlook account,228,Email_Accounts,P - Personal > Daily_Life_Digital_Presence > Email_Accounts > Outlook,3,0
+234,Yahoo,file,Yahoo email account,228,Email_Accounts,P - Personal > Daily_Life_Digital_Presence > Email_Accounts > Yahoo,3,0
+251,Entertainment,folder,Entertainment subscriptions,225,Daily_Life_Digital_Presence,P - Personal > Daily_Life_Digital_Presence > Entertainment,2,6
+252,AMC,file,AMC Theaters,251,Entertainment,P - Personal > Daily_Life_Digital_Presence > Entertainment > AMC,3,0
+255,Crunchyroll,file,Crunchyroll subscription,251,Entertainment,P - Personal > Daily_Life_Digital_Presence > Entertainment > Crunchyroll,3,0
+256,Disney+,file,Disney Plus subscription,251,Entertainment,P - Personal > Daily_Life_Digital_Presence > Entertainment > Disney+,3,0
+257,HBO_Max,file,HBO Max subscription,251,Entertainment,P - Personal > Daily_Life_Digital_Presence > Entertainment > HBO_Max,3,0
+254,Hulu,file,Hulu subscription,251,Entertainment,P - Personal > Daily_Life_Digital_Presence > Entertainment > Hulu,3,0
+253,Netflix,file,Netflix subscription,251,Entertainment,P - Personal > Daily_Life_Digital_Presence > Entertainment > Netflix,3,0
+226,Routines_Preferences,folder,Daily routines and preferences,225,Daily_Life_Digital_Presence,P - Personal > Daily_Life_Digital_Presence > Routines_Preferences,2,1
+227,Notes,file,Routine and preference notes,226,Routines_Preferences,P - Personal > Daily_Life_Digital_Presence > Routines_Preferences > Notes,3,0
+245,Shopping,folder,Shopping accounts,225,Daily_Life_Digital_Presence,P - Personal > Daily_Life_Digital_Presence > Shopping,2,5
+246,Amazon,file,Amazon account,245,Shopping,P - Personal > Daily_Life_Digital_Presence > Shopping > Amazon,3,0
+249,BestBuy,file,Best Buy account,245,Shopping,P - Personal > Daily_Life_Digital_Presence > Shopping > BestBuy,3,0
+250,Costco,file,Costco account,245,Shopping,P - Personal > Daily_Life_Digital_Presence > Shopping > Costco,3,0
+248,Target,file,Target account,245,Shopping,P - Personal > Daily_Life_Digital_Presence > Shopping > Target,3,0
+247,Walmart,file,Walmart account,245,Shopping,P - Personal > Daily_Life_Digital_Presence > Shopping > Walmart,3,0
+235,Social_Media,folder,Social media accounts,225,Daily_Life_Digital_Presence,P - Personal > Daily_Life_Digital_Presence > Social_Media,2,5
+242,Facebook,file,Facebook account,235,Social_Media,P - Personal > Daily_Life_Digital_Presence > Social_Media > Facebook,3,0
+236,Instagram,folder,Instagram account,235,Social_Media,P - Personal > Daily_Life_Digital_Presence > Social_Media > Instagram,3,1
+237,Credentials,file,Instagram credentials,236,Instagram,P - Personal > Daily_Life_Digital_Presence > Social_Media > Instagram > Credentials,4,0
+243,LinkedIn,file,LinkedIn account,235,Social_Media,P - Personal > Daily_Life_Digital_Presence > Social_Media > LinkedIn,3,0
+244,Snapchat,file,Snapchat account,235,Social_Media,P - Personal > Daily_Life_Digital_Presence > Social_Media > Snapchat,3,0
+239,TikTok,folder,TikTok account,235,Social_Media,P - Personal > Daily_Life_Digital_Presence > Social_Media > TikTok,3,1
+240,Credentials,file,TikTok credentials,239,TikTok,P - Personal > Daily_Life_Digital_Presence > Social_Media > TikTok > Credentials,4,0
+214,Financial,folder,Personal financial management,1,P - Personal,P - Personal > Financial,1,1
+215,Accounts_Banking,folder,Banking and credit card accounts,214,Financial,P - Personal > Financial > Accounts_Banking,2,1
+216,Bank_of_America,folder,Bank of America accounts,215,Accounts_Banking,P - Personal > Financial > Accounts_Banking > Bank_of_America,3,1
+217,Debit,folder,Debit card account,216,Bank_of_America,P - Personal > Financial > Accounts_Banking > Bank_of_America > Debit,4,1
+218,Credentials,file,Bank of America debit credentials,217,Debit,P - Personal > Financial > Accounts_Banking > Bank_of_America > Debit > Credentials,5,4
+222,Airbnb,file,Airbnb bookings,218,Credentials,P - Personal > Financial > Accounts_Banking > Bank_of_America > Debit > Credentials > Airbnb,6,0
+220,Delta,file,Delta airline,218,Credentials,P - Personal > Financial > Accounts_Banking > Bank_of_America > Debit > Credentials > Delta,6,0
+219,Emirates,file,Emirates airline,218,Credentials,P - Personal > Financial > Accounts_Banking > Bank_of_America > Debit > Credentials > Emirates,6,0
+221,United,file,United airline,218,Credentials,P - Personal > Financial > Accounts_Banking > Bank_of_America > Debit > Credentials > United,6,0
+2,Important_Documents,folder,Core records and IDs,1,P - Personal,P - Personal > Important_Documents,1,5
+3,Identity_Records,folder,Official identification documents,2,Important_Documents,P - Personal > Important_Documents > Identity_Records,2,5
+7,Birth_Certificate,file,,3,Identity_Records,P - Personal > Important_Documents > Identity_Records > Birth_Certificate,3,0
+5,Drivers_License,file,,3,Identity_Records,P - Personal > Important_Documents > Identity_Records > Drivers_License,3,0
+4,Passport,file,,3,Identity_Records,P - Personal > Important_Documents > Identity_Records > Passport,3,0
+6,Social_Security_Card,file,,3,Identity_Records,P - Personal > Important_Documents > Identity_Records > Social_Security_Card,3,0
+8,Voter_Registration,file,,3,Identity_Records,P - Personal > Important_Documents > Identity_Records > Voter_Registration,3,0
+22,Insurance,folder,Coverage documents,2,Important_Documents,P - Personal > Important_Documents > Insurance,2,4
+23,Auto_Insurance,file,,22,Insurance,P - Personal > Important_Documents > Insurance > Auto_Insurance,3,0
+24,Health_Insurance,file,,22,Insurance,P - Personal > Important_Documents > Insurance > Health_Insurance,3,0
+25,Life_Insurance,file,,22,Insurance,P - Personal > Important_Documents > Insurance > Life_Insurance,3,0
+26,Renters_or_Homeowners,file,,22,Insurance,P - Personal > Important_Documents > Insurance > Renters_or_Homeowners,3,0
+13,Legal_Documents,folder,"Contracts, agreements, authorizations",2,Important_Documents,P - Personal > Important_Documents > Legal_Documents,2,4
+14,Lease_Agreements,file,,13,Legal_Documents,P - Personal > Important_Documents > Legal_Documents > Lease_Agreements,3,0
+17,NDAs_Employment_Contracts,file,,13,Legal_Documents,P - Personal > Important_Documents > Legal_Documents > NDAs_Employment_Contracts,3,0
+15,Power_of_Attorney,file,,13,Legal_Documents,P - Personal > Important_Documents > Legal_Documents > Power_of_Attorney,3,0
+16,Wills_Trusts,file,,13,Legal_Documents,P - Personal > Important_Documents > Legal_Documents > Wills_Trusts,3,0
+9,Medical_Records,folder,Health summaries and insurance info,2,Important_Documents,P - Personal > Important_Documents > Medical_Records,2,3
+11,Health_Insurance_Cards,file,,9,Medical_Records,P - Personal > Important_Documents > Medical_Records > Health_Insurance_Cards,3,0
+10,Immunization_Records,file,,9,Medical_Records,P - Personal > Important_Documents > Medical_Records > Immunization_Records,3,0
+12,Primary_Care_Notes,file,,9,Medical_Records,P - Personal > Important_Documents > Medical_Records > Primary_Care_Notes,3,0
+18,Tax_Records,folder,Annual filings and statements,2,Important_Documents,P - Personal > Important_Documents > Tax_Records,2,3
+20,1099_Forms,file,,18,Tax_Records,P - Personal > Important_Documents > Tax_Records > 1099_Forms,3,0
+21,IRS_Returns,file,,18,Tax_Records,P - Personal > Important_Documents > Tax_Records > IRS_Returns,3,0
+19,W2_Forms,file,,18,Tax_Records,P - Personal > Important_Documents > Tax_Records > W2_Forms,3,0
+212,Timeline,folder,Life events and timeline,1,P - Personal,P - Personal > Timeline,1,3
+700,P - Projects,folder,Personal and professional development projects,,,P - Projects,0,5
+704,Hackathons,folder,Hackathon projects and competitions,700,P - Projects,P - Projects > Hackathons,1,0
+703,NASA_JSC,folder,NASA Johnson Space Center projects,700,P - Projects,P - Projects > NASA_JSC,1,0
+701,SFA,folder,SFA project documentation and resources,700,P - Projects,P - Projects > SFA,1,0
+702,SpaceApps,folder,NASA Space Apps Challenge projects,700,P - Projects,P - Projects > SpaceApps,1,0
+705,Xain_Dev,folder,Xain development projects and personal coding,700,P - Projects,P - Projects > Xain_Dev,1,0
+600,W - Work,folder,"Professional work history, employers, projects, and portfolio",,,W - Work,0,5
+602,Employers,folder,All employers and organizations worked with,600,W - Work,W - Work > Employers,1,9
+616,Ashford_Communities,folder,Ashford Communities employment,602,Employers,W - Work > Employers > Ashford_Communities,2,0
+618,Gulf_Coast_Regional_Blood_Center,folder,Gulf Coast Regional Blood Center employment,602,Employers,W - Work > Employers > Gulf_Coast_Regional_Blood_Center,2,0
+619,ISGH,folder,Islamic Society of Greater Houston employment,602,Employers,W - Work > Employers > ISGH,2,1
+620,Maryam_Islamic_Center,folder,Maryam Islamic Center employment,619,ISGH,W - Work > Employers > ISGH > Maryam_Islamic_Center,3,0
+615,Minaret_Foundation,folder,Minaret Foundation employment,602,Employers,W - Work > Employers > Minaret_Foundation,2,0
+603,R-Cubed,folder,R-Cubed employment and projects,602,Employers,W - Work > Employers > R-Cubed,2,12
+6038,Business_Development,folder,Business development strategies and planning documents,603,R-Cubed,W - Work > Employers > R-Cubed > Business_Development,3,0
+6032,Business_Documents,folder,"Company documents, branding, and official records",603,R-Cubed,W - Work > Employers > R-Cubed > Business_Documents,3,0
+6033,Cleverly_Dashboard_Data,folder,Cleverly dashboard exports and analytics,603,R-Cubed,W - Work > Employers > R-Cubed > Cleverly_Dashboard_Data,3,0
+6041,Lead_Generation_Data,folder,"Lead generation, Apollo data, and suggested contacts",603,R-Cubed,W - Work > Employers > R-Cubed > Lead_Generation_Data,3,0
+6034,LinkedIn_Social_Media,folder,LinkedIn analytics and social media data,603,R-Cubed,W - Work > Employers > R-Cubed > LinkedIn_Social_Media,3,0
+6039,Marketing_GTM,folder,"Marketing materials, GTM assets, and Oracle overviews",603,R-Cubed,W - Work > Employers > R-Cubed > Marketing_GTM,3,0
+6035,Meeting_Calendar_Data,folder,"Meeting schedules, calendar exports, and Jim's calendar",603,R-Cubed,W - Work > Employers > R-Cubed > Meeting_Calendar_Data,3,0
+6036,Microsoft_Teams_OneDrive,folder,Teams chats and OneDrive media files,603,R-Cubed,W - Work > Employers > R-Cubed > Microsoft_Teams_OneDrive,3,0
+6040,Partner_Contact_Data,folder,"Partner contacts, collaboration accounts, and client success",603,R-Cubed,W - Work > Employers > R-Cubed > Partner_Contact_Data,3,0
+6031,Pay_Stubs_Benefits,folder,"Pay stubs, benefits, and employment documents",603,R-Cubed,W - Work > Employers > R-Cubed > Pay_Stubs_Benefits,3,0
+6037,Sales_Pipeline_Data,folder,"Sales pipeline, territory lists, and qualification guidelines",603,R-Cubed,W - Work > Employers > R-Cubed > Sales_Pipeline_Data,3,0
+6042,Website_Planning,folder,"Website requirements, search history, and Zoom recordings",603,R-Cubed,W - Work > Employers > R-Cubed > Website_Planning,3,0
+604,Red_River_Development,folder,Red River Development employment,602,Employers,W - Work > Employers > Red_River_Development,2,0
+610,Rose_Rock_Development,folder,Rose Rock Development employment,602,Employers,W - Work > Employers > Rose_Rock_Development,2,4
+613,Adams,folder,Adams project,610,Rose_Rock_Development,W - Work > Employers > Rose_Rock_Development > Adams,3,0
+612,Palace,folder,Palace project,610,Rose_Rock_Development,W - Work > Employers > Rose_Rock_Development > Palace,3,0
+611,Reunion,folder,Reunion project,610,Rose_Rock_Development,W - Work > Employers > Rose_Rock_Development > Reunion,3,0
+614,Vandever,folder,Vandever project,610,Rose_Rock_Development,W - Work > Employers > Rose_Rock_Development > Vandever,3,0
+605,Trulo_Homes,folder,Trulo Homes employment across multiple locations,602,Employers,W - Work > Employers > Trulo_Homes,2,4
+606,Trulo_Homes_Bentoville,folder,Trulo Homes - Bentoville location,605,Trulo_Homes,W - Work > Employers > Trulo_Homes > Trulo_Homes_Bentoville,3,0
+607,Trulo_Homes_Jenks,folder,Trulo Homes - Jenks location,605,Trulo_Homes,W - Work > Employers > Trulo_Homes > Trulo_Homes_Jenks,3,0
+609,Trulo_Homes_Kansas_City,folder,Trulo Homes - Kansas City location,605,Trulo_Homes,W - Work > Employers > Trulo_Homes > Trulo_Homes_Kansas_City,3,0
+608,Trulo_Homes_Whitestone,folder,Trulo Homes - Whitestone location,605,Trulo_Homes,W - Work > Employers > Trulo_Homes > Trulo_Homes_Whitestone,3,0
+617,US_Census_Bureau,folder,US Census Bureau employment,602,Employers,W - Work > Employers > US_Census_Bureau,2,0
+622,Tools,folder,Work-related tools and software,600,W - Work,W - Work > Tools,1,0
+623,Work_Portfolio,folder,Professional portfolio and achievements,600,W - Work,W - Work > Work_Portfolio,1,0
+621,Work_Projects,folder,Professional projects and deliverables,600,W - Work,W - Work > Work_Projects,1,0
+601,Work_Timeline,folder,Chronological work history and career progression,600,W - Work,W - Work > Work_Timeline,1,0
