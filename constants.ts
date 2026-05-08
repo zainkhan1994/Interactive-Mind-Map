@@ -15,7 +15,8 @@ const parseBlueprint = (): RawNode[] => {
   let rows: d3.DSVRowArray<string>;
   try {
     rows = d3.csvParse(blueprintCsv);
-  } catch {
+  } catch (error) {
+    console.warn('Failed to parse blueprint CSV data.', error);
     return [];
   }
 
@@ -23,6 +24,7 @@ const parseBlueprint = (): RawNode[] => {
     return [];
   }
   const nodes = new Map<string, RawNode>();
+  const unknownRoots = new Set<string>();
 
   rows.forEach((row) => {
     const hierarchyPath = row.hierarchyPath?.trim();
@@ -39,7 +41,12 @@ const parseBlueprint = (): RawNode[] => {
     const name = row.name?.trim() || segments[segments.length - 1];
     const description = row.description?.trim() || '';
     const type = row.type?.trim() === 'folder' ? 'folder' : 'file';
-    const category = CATEGORY_BY_ROOT[segments[0]];
+    const rootSegment = segments[0];
+    const category = CATEGORY_BY_ROOT[rootSegment];
+    if (!category && !unknownRoots.has(rootSegment)) {
+      console.warn(`Unknown root category "${rootSegment}" in blueprint CSV.`);
+      unknownRoots.add(rootSegment);
+    }
 
     nodes.set(hierarchyPath, {
       id: hierarchyPath,
