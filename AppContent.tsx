@@ -33,16 +33,19 @@ const COLOR_BY_CATEGORY = {
   projects: "black"
 };
 
-const rawNodes = blueprintData.map((node) => ({
-  uid: node.id,
-  id: node.id,
-  name: node.name,
-  description: node.description,
-  type: node.type,
-  parentUid: node.parentId,
-  category: node.category,
-  color: node.category ? COLOR_BY_CATEGORY[node.category] : undefined
-}));
+const rawNodes = blueprintData.map((node) => {
+  const normalizedCategory = node.category?.toLowerCase();
+  return {
+    uid: node.id,
+    id: node.id,
+    name: node.name,
+    description: node.description,
+    type: node.type,
+    parentUid: node.parentId,
+    category: normalizedCategory ?? node.category,
+    color: normalizedCategory ? COLOR_BY_CATEGORY[normalizedCategory] : undefined
+  };
+});
 
 function buildTree(nodes) {
   const map = new Map(nodes.map((n) => [n.uid, { ...n, children: [] }]));
@@ -87,11 +90,12 @@ function SquareNode({ node, depth, collapsed, toggle }) {
 
 export function LifeNodeTogglePrototype() {
   const roots = useMemo(() => buildTree(rawNodes), []);
-  const [collapsed, setCollapsed] = useState(new Set(rawNodes.filter((n) => n.parentUid !== null).map((n) => n.uid)));
+  const [collapsed, setCollapsed] = useState(() => new Set(rawNodes.filter((n) => n.parentUid !== null).map((n) => n.uid)));
   const [mode, setMode] = useState("map");
   const [zoom, setZoom] = useState({ scale: 1, x: 0, y: 0 });
   const containerRef = React.useRef(null);
-  const isDragging = React.useRef(false);
+  const isDraggingRef = React.useRef(false);
+  const [isDragging, setIsDragging] = useState(false);
   const dragStart = React.useRef({ x: 0, y: 0 });
 
   React.useEffect(() => {
@@ -113,19 +117,21 @@ export function LifeNodeTogglePrototype() {
     if (mode !== "map") return;
     // only if they click the container background, not buttons
     if (e.target.tagName.toLowerCase() === 'button' || e.target.closest('button')) return;
-    isDragging.current = true;
+    isDraggingRef.current = true;
+    setIsDragging(true);
     dragStart.current = { x: e.clientX - zoom.x, y: e.clientY - zoom.y };
     e.currentTarget.setPointerCapture(e.pointerId);
   };
 
   const handlePointerMove = (e) => {
-    if (!isDragging.current || mode !== "map") return;
+    if (!isDraggingRef.current || mode !== "map") return;
     e.preventDefault();
     setZoom(prev => ({ ...prev, x: e.clientX - dragStart.current.x, y: e.clientY - dragStart.current.y }));
   };
 
   const handlePointerUp = (e) => {
-    isDragging.current = false;
+    isDraggingRef.current = false;
+    setIsDragging(false);
     e.currentTarget.releasePointerCapture(e.pointerId);
   };
 
@@ -232,7 +238,7 @@ export function LifeNodeTogglePrototype() {
             backgroundImage: "radial-gradient(#cbd5e1 1px, transparent 1px)",
             backgroundSize: `${24 * zoom.scale}px ${24 * zoom.scale}px`,
             backgroundPosition: `${zoom.x}px ${zoom.y}px`,
-            cursor: isDragging.current ? 'grabbing' : 'grab'
+            cursor: isDragging ? 'grabbing' : 'grab'
           }}
         >
           <div 
