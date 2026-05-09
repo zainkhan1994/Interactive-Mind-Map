@@ -37,7 +37,6 @@ const rawNodes = blueprintData.map((node) => {
   const normalizedCategory = node.category?.toLowerCase();
   return {
     uid: node.id,
-    id: node.id,
     name: node.name,
     description: node.description,
     type: node.type,
@@ -46,6 +45,8 @@ const rawNodes = blueprintData.map((node) => {
     color: normalizedCategory ? COLOR_BY_CATEGORY[normalizedCategory] : undefined
   };
 });
+
+const defaultCollapsedIds = rawNodes.filter((node) => node.parentUid !== null).map((node) => node.uid);
 
 function buildTree(nodes) {
   const map = new Map(nodes.map((n) => [n.uid, { ...n, children: [] }]));
@@ -68,6 +69,7 @@ function SquareNode({ node, depth, collapsed, toggle }) {
     <div className="flex flex-col items-center relative">
       {depth > 0 && <div className="h-8 w-px bg-slate-300" />}
       <button
+        data-drag-ignore
         onClick={() => hasChildren && toggle(node.uid)}
         className={`min-w-[86px] min-h-[56px] rounded-lg border shadow-sm px-3 py-2 text-[10px] font-bold uppercase tracking-tight flex items-center justify-center gap-1 ${colorClass}`}
       >
@@ -90,7 +92,7 @@ function SquareNode({ node, depth, collapsed, toggle }) {
 
 export function LifeNodeTogglePrototype() {
   const roots = useMemo(() => buildTree(rawNodes), []);
-  const [collapsed, setCollapsed] = useState(() => new Set(rawNodes.filter((n) => n.parentUid !== null).map((n) => n.uid)));
+  const [collapsed, setCollapsed] = useState(() => new Set(defaultCollapsedIds));
   const [mode, setMode] = useState("map");
   const [zoom, setZoom] = useState({ scale: 1, x: 0, y: 0 });
   const containerRef = React.useRef(null);
@@ -115,8 +117,9 @@ export function LifeNodeTogglePrototype() {
 
   const handlePointerDown = (e) => {
     if (mode !== "map") return;
-    // only if they click the container background, not buttons
-    if (e.target.tagName.toLowerCase() === 'button' || e.target.closest('button')) return;
+    // only if they click the container background, not nodes
+    const target = e.target;
+    if (target instanceof Element && target.closest('[data-drag-ignore]')) return;
     isDraggingRef.current = true;
     setIsDragging(true);
     dragStart.current = { x: e.clientX - zoom.x, y: e.clientY - zoom.y };
@@ -160,7 +163,11 @@ export function LifeNodeTogglePrototype() {
     const allIds = roots.flatMap(collectIds);
     const root = roots.find((r) => r.category === category);
     const keepOpen = new Set(allIds);
-    if (root) collectIds(root).forEach((id) => keepOpen.delete(id));
+    if (!root) {
+      setCollapsed(new Set());
+      return;
+    }
+    collectIds(root).forEach((id) => keepOpen.delete(id));
     setCollapsed(keepOpen);
   };
 
