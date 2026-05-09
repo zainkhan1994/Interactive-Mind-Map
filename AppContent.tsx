@@ -49,15 +49,16 @@ const rawNodes = blueprintData.map((node) => {
 const defaultCollapsedIds = rawNodes.filter((node) => node.parentUid !== null).map((node) => node.uid);
 const PAGE_MAP = "map";
 const PAGE_AGENDA = "agenda";
+type PageId = typeof PAGE_MAP | typeof PAGE_AGENDA;
 const DEFAULT_PAGE = PAGE_MAP;
-const VALID_PAGES = new Set([PAGE_MAP, PAGE_AGENDA]);
+const VALID_PAGES = new Set<PageId>([PAGE_MAP, PAGE_AGENDA]);
 
-const getPageFromLocation = () => {
+const getPageFromLocation = (): PageId => {
   if (typeof window === "undefined") {
     return DEFAULT_PAGE;
   }
   const hash = window.location.hash.replace("#", "").toLowerCase();
-  return VALID_PAGES.has(hash) ? hash : DEFAULT_PAGE;
+  return VALID_PAGES.has(hash as PageId) ? (hash as PageId) : DEFAULT_PAGE;
 };
 
 function buildTree(nodes) {
@@ -191,15 +192,14 @@ export function LifeNodeTogglePrototype() {
     setCollapsed(keepOpen);
   };
 
-  const navigateToPage = (nextPage) => {
-    const safePage = VALID_PAGES.has(nextPage) ? nextPage : DEFAULT_PAGE;
-    setActivePage(safePage);
+  const navigateToPage = (nextPage: PageId) => {
+    setActivePage(nextPage);
     if (typeof window === "undefined") {
       return;
     }
     const nextUrl = new URL(window.location.href);
-    nextUrl.hash = safePage === DEFAULT_PAGE ? "" : safePage;
-    if (window.location.href !== nextUrl.toString()) {
+    nextUrl.hash = nextPage === DEFAULT_PAGE ? "" : nextPage;
+    if (window.location.hash !== nextUrl.hash) {
       window.history.replaceState(null, "", nextUrl.toString());
     }
   };
