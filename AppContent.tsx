@@ -47,6 +47,19 @@ const rawNodes = blueprintData.map((node) => {
 });
 
 const defaultCollapsedIds = rawNodes.filter((node) => node.parentUid !== null).map((node) => node.uid);
+const PAGE_MAP = "map";
+const PAGE_AGENDA = "agenda";
+type PageId = typeof PAGE_MAP | typeof PAGE_AGENDA;
+const DEFAULT_PAGE = PAGE_MAP;
+const VALID_PAGES = new Set<PageId>([PAGE_MAP, PAGE_AGENDA]);
+
+const getPageFromLocation = (): PageId => {
+  if (typeof window === "undefined") {
+    return DEFAULT_PAGE;
+  }
+  const hash = window.location.hash.replace("#", "").toLowerCase();
+  return VALID_PAGES.has(hash as PageId) ? (hash as PageId) : DEFAULT_PAGE;
+};
 
 function buildTree(nodes) {
   const map = new Map(nodes.map((n) => [n.uid, { ...n, children: [] }]));
@@ -93,7 +106,7 @@ function SquareNode({ node, depth, collapsed, toggle }) {
 export function LifeNodeTogglePrototype() {
   const roots = useMemo(() => buildTree(rawNodes), []);
   const [collapsed, setCollapsed] = useState(() => new Set(defaultCollapsedIds));
-  const [mode, setMode] = useState("map");
+  const [activePage, setActivePage] = useState(getPageFromLocation);
   const [zoom, setZoom] = useState({ scale: 1, x: 0, y: 0 });
   const containerRef = React.useRef(null);
   const isDraggingRef = React.useRef(false);
@@ -102,7 +115,7 @@ export function LifeNodeTogglePrototype() {
 
   React.useEffect(() => {
     const handleKeyDown = (e) => {
-      if (mode !== "map") return;
+      if (activePage !== PAGE_MAP) return;
       if (e.key === '=' || e.key === '+') {
         setZoom(prev => ({ ...prev, scale: Math.min(prev.scale * 1.2, 5) }));
       } else if (e.key === '-' || e.key === '_') {
@@ -113,10 +126,18 @@ export function LifeNodeTogglePrototype() {
     };
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [mode]);
+  }, [activePage]);
+
+  React.useEffect(() => {
+    const handleHashChange = () => {
+      setActivePage(getPageFromLocation());
+    };
+    window.addEventListener("hashchange", handleHashChange);
+    return () => window.removeEventListener("hashchange", handleHashChange);
+  }, []);
 
   const handlePointerDown = (e) => {
-    if (mode !== "map") return;
+    if (activePage !== PAGE_MAP) return;
     // only if they click the container background, not nodes
     const target = e.target;
     if (target instanceof Element && target.closest('[data-drag-ignore]')) return;
@@ -127,7 +148,7 @@ export function LifeNodeTogglePrototype() {
   };
 
   const handlePointerMove = (e) => {
-    if (!isDraggingRef.current || mode !== "map") return;
+    if (!isDraggingRef.current || activePage !== PAGE_MAP) return;
     e.preventDefault();
     setZoom(prev => ({ ...prev, x: e.clientX - dragStart.current.x, y: e.clientY - dragStart.current.y }));
   };
@@ -139,7 +160,7 @@ export function LifeNodeTogglePrototype() {
   };
 
   const handleWheel = (e) => {
-    if (mode !== "map") return;
+    if (activePage !== PAGE_MAP) return;
     if (e.ctrlKey || e.metaKey) {
       e.preventDefault();
       setZoom(prev => {
@@ -171,25 +192,37 @@ export function LifeNodeTogglePrototype() {
     setCollapsed(keepOpen);
   };
 
+  const navigateToPage = (nextPage: PageId) => {
+    setActivePage(nextPage);
+    if (typeof window === "undefined") {
+      return;
+    }
+    const nextUrl = new URL(window.location.href);
+    nextUrl.hash = nextPage === DEFAULT_PAGE ? "" : nextPage;
+    if (window.location.hash !== nextUrl.hash) {
+      window.history.replaceState(null, "", nextUrl.toString());
+    }
+  };
+
   return (
     <div className="w-full min-h-screen bg-slate-50 text-slate-900 overflow-hidden flex flex-col">
       <div className="sticky top-0 z-10 bg-white/90 backdrop-blur border-b border-slate-200 p-3 flex flex-wrap items-center gap-2 max-w-[100vw]">
-        <button onClick={() => setMode("map")} className={`rounded-lg px-3 py-2 text-sm font-semibold border transition-colors ${mode === "map" ? "bg-black text-white" : "bg-white hover:bg-slate-50"}`}>
+        <button onClick={() => navigateToPage(PAGE_MAP)} className={`rounded-lg px-3 py-2 text-sm font-semibold border transition-colors ${activePage === PAGE_MAP ? "bg-black text-white" : "bg-white hover:bg-slate-50"}`}>
           <NetworkIcon /> Life Map
         </button>
-        <button onClick={() => setMode("agenda")} className={`rounded-lg px-3 py-2 text-sm font-semibold border transition-colors ${mode === "agenda" ? "bg-black text-white" : "bg-white hover:bg-slate-50"}`}>
+        <button onClick={() => navigateToPage(PAGE_AGENDA)} className={`rounded-lg px-3 py-2 text-sm font-semibold border transition-colors ${activePage === PAGE_AGENDA ? "bg-black text-white" : "bg-white hover:bg-slate-50"}`}>
           <CalendarIcon /> Everyday Agenda
         </button>
-        <div className="w-px h-6 bg-slate-300 mx-2" />
-        <button onClick={() => setCollapsed(new Set())} className="rounded-lg px-3 py-2 text-sm border bg-white hover:bg-slate-50 transition-colors shadow-sm">Expand All</button>
-        <button onClick={() => setCollapsed(new Set(rawNodes.map((n) => n.uid)))} className="rounded-lg px-3 py-2 text-sm border bg-white hover:bg-slate-50 transition-colors shadow-sm">Collapse All</button>
-        <div className="w-px h-6 bg-slate-300 mx-2" />
-        <button onClick={() => showOnly("health")} className="rounded-lg px-3 py-2 text-sm font-medium border bg-yellow-100 hover:bg-yellow-200 transition-colors border-yellow-200 text-yellow-900 shadow-sm">Health</button>
-        <button onClick={() => showOnly("work")} className="rounded-lg px-3 py-2 text-sm font-medium border bg-green-100 hover:bg-green-200 transition-colors border-green-200 text-green-900 shadow-sm">Work</button>
-        <button onClick={() => showOnly("personal")} className="rounded-lg px-3 py-2 text-sm font-medium border bg-red-100 hover:bg-red-200 transition-colors border-red-200 text-red-900 shadow-sm">Personal</button>
-        <button onClick={() => showOnly("projects")} className="rounded-lg px-3 py-2 text-sm font-medium border bg-slate-200 hover:bg-slate-300 transition-colors border-slate-300 text-slate-900 shadow-sm">Projects</button>
-        {mode === "map" && (
+        {activePage === PAGE_MAP && (
           <>
+            <div className="w-px h-6 bg-slate-300 mx-2" />
+            <button onClick={() => setCollapsed(new Set())} className="rounded-lg px-3 py-2 text-sm border bg-white hover:bg-slate-50 transition-colors shadow-sm">Expand All</button>
+            <button onClick={() => setCollapsed(new Set(rawNodes.map((n) => n.uid)))} className="rounded-lg px-3 py-2 text-sm border bg-white hover:bg-slate-50 transition-colors shadow-sm">Collapse All</button>
+            <div className="w-px h-6 bg-slate-300 mx-2" />
+            <button onClick={() => showOnly("health")} className="rounded-lg px-3 py-2 text-sm font-medium border bg-yellow-100 hover:bg-yellow-200 transition-colors border-yellow-200 text-yellow-900 shadow-sm">Health</button>
+            <button onClick={() => showOnly("work")} className="rounded-lg px-3 py-2 text-sm font-medium border bg-green-100 hover:bg-green-200 transition-colors border-green-200 text-green-900 shadow-sm">Work</button>
+            <button onClick={() => showOnly("personal")} className="rounded-lg px-3 py-2 text-sm font-medium border bg-red-100 hover:bg-red-200 transition-colors border-red-200 text-red-900 shadow-sm">Personal</button>
+            <button onClick={() => showOnly("projects")} className="rounded-lg px-3 py-2 text-sm font-medium border bg-slate-200 hover:bg-slate-300 transition-colors border-slate-300 text-slate-900 shadow-sm">Projects</button>
             <div className="w-px h-6 bg-slate-300 mx-2" />
             <span className="text-xs text-slate-500 mr-2 flex items-center">
               Use + / - to zoom, 0 to reset. Drag to pan.
@@ -201,7 +234,7 @@ export function LifeNodeTogglePrototype() {
         )}
       </div>
 
-      {mode === "agenda" ? (
+      {activePage === PAGE_AGENDA ? (
         <div className="p-8 flex-1 overflow-auto w-full">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-2xl font-bold mb-6">Everyday Agenda</h1>
