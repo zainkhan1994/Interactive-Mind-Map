@@ -47,8 +47,10 @@ const rawNodes = blueprintData.map((node) => {
 });
 
 const defaultCollapsedIds = rawNodes.filter((node) => node.parentUid !== null).map((node) => node.uid);
-const DEFAULT_PAGE = "map";
-const VALID_PAGES = new Set([DEFAULT_PAGE, "agenda"]);
+const PAGE_MAP = "map";
+const PAGE_AGENDA = "agenda";
+const DEFAULT_PAGE = PAGE_MAP;
+const VALID_PAGES = new Set([PAGE_MAP, PAGE_AGENDA]);
 
 const getPageFromLocation = () => {
   if (typeof window === "undefined") {
@@ -103,7 +105,7 @@ function SquareNode({ node, depth, collapsed, toggle }) {
 export function LifeNodeTogglePrototype() {
   const roots = useMemo(() => buildTree(rawNodes), []);
   const [collapsed, setCollapsed] = useState(() => new Set(defaultCollapsedIds));
-  const [page, setPage] = useState(getPageFromLocation);
+  const [activePage, setActivePage] = useState(getPageFromLocation);
   const [zoom, setZoom] = useState({ scale: 1, x: 0, y: 0 });
   const containerRef = React.useRef(null);
   const isDraggingRef = React.useRef(false);
@@ -112,7 +114,7 @@ export function LifeNodeTogglePrototype() {
 
   React.useEffect(() => {
     const handleKeyDown = (e) => {
-      if (page !== "map") return;
+      if (activePage !== PAGE_MAP) return;
       if (e.key === '=' || e.key === '+') {
         setZoom(prev => ({ ...prev, scale: Math.min(prev.scale * 1.2, 5) }));
       } else if (e.key === '-' || e.key === '_') {
@@ -123,18 +125,18 @@ export function LifeNodeTogglePrototype() {
     };
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [page]);
+  }, [activePage]);
 
   React.useEffect(() => {
     const handleHashChange = () => {
-      setPage(getPageFromLocation());
+      setActivePage(getPageFromLocation());
     };
     window.addEventListener("hashchange", handleHashChange);
     return () => window.removeEventListener("hashchange", handleHashChange);
   }, []);
 
   const handlePointerDown = (e) => {
-    if (page !== "map") return;
+    if (activePage !== PAGE_MAP) return;
     // only if they click the container background, not nodes
     const target = e.target;
     if (target instanceof Element && target.closest('[data-drag-ignore]')) return;
@@ -145,7 +147,7 @@ export function LifeNodeTogglePrototype() {
   };
 
   const handlePointerMove = (e) => {
-    if (!isDraggingRef.current || page !== "map") return;
+    if (!isDraggingRef.current || activePage !== PAGE_MAP) return;
     e.preventDefault();
     setZoom(prev => ({ ...prev, x: e.clientX - dragStart.current.x, y: e.clientY - dragStart.current.y }));
   };
@@ -157,7 +159,7 @@ export function LifeNodeTogglePrototype() {
   };
 
   const handleWheel = (e) => {
-    if (page !== "map") return;
+    if (activePage !== PAGE_MAP) return;
     if (e.ctrlKey || e.metaKey) {
       e.preventDefault();
       setZoom(prev => {
@@ -191,7 +193,7 @@ export function LifeNodeTogglePrototype() {
 
   const navigateToPage = (nextPage) => {
     const safePage = VALID_PAGES.has(nextPage) ? nextPage : DEFAULT_PAGE;
-    setPage(safePage);
+    setActivePage(safePage);
     if (typeof window === "undefined") {
       return;
     }
@@ -205,13 +207,13 @@ export function LifeNodeTogglePrototype() {
   return (
     <div className="w-full min-h-screen bg-slate-50 text-slate-900 overflow-hidden flex flex-col">
       <div className="sticky top-0 z-10 bg-white/90 backdrop-blur border-b border-slate-200 p-3 flex flex-wrap items-center gap-2 max-w-[100vw]">
-        <button onClick={() => navigateToPage("map")} className={`rounded-lg px-3 py-2 text-sm font-semibold border transition-colors ${page === "map" ? "bg-black text-white" : "bg-white hover:bg-slate-50"}`}>
+        <button onClick={() => navigateToPage(PAGE_MAP)} className={`rounded-lg px-3 py-2 text-sm font-semibold border transition-colors ${activePage === PAGE_MAP ? "bg-black text-white" : "bg-white hover:bg-slate-50"}`}>
           <NetworkIcon /> Life Map
         </button>
-        <button onClick={() => navigateToPage("agenda")} className={`rounded-lg px-3 py-2 text-sm font-semibold border transition-colors ${page === "agenda" ? "bg-black text-white" : "bg-white hover:bg-slate-50"}`}>
+        <button onClick={() => navigateToPage(PAGE_AGENDA)} className={`rounded-lg px-3 py-2 text-sm font-semibold border transition-colors ${activePage === PAGE_AGENDA ? "bg-black text-white" : "bg-white hover:bg-slate-50"}`}>
           <CalendarIcon /> Everyday Agenda
         </button>
-        {page === "map" && (
+        {activePage === PAGE_MAP && (
           <>
             <div className="w-px h-6 bg-slate-300 mx-2" />
             <button onClick={() => setCollapsed(new Set())} className="rounded-lg px-3 py-2 text-sm border bg-white hover:bg-slate-50 transition-colors shadow-sm">Expand All</button>
@@ -232,7 +234,7 @@ export function LifeNodeTogglePrototype() {
         )}
       </div>
 
-      {page === "agenda" ? (
+      {activePage === PAGE_AGENDA ? (
         <div className="p-8 flex-1 overflow-auto w-full">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-2xl font-bold mb-6">Everyday Agenda</h1>
