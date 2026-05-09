@@ -54,7 +54,7 @@ const getPageFromLocation = () => {
   if (typeof window === "undefined") {
     return DEFAULT_PAGE;
   }
-  const hash = window.location.hash.replace("#", "").trim().toLowerCase();
+  const hash = window.location.hash.replace("#", "").toLowerCase();
   return VALID_PAGES.has(hash) ? hash : DEFAULT_PAGE;
 };
 
@@ -196,15 +196,12 @@ export function LifeNodeTogglePrototype() {
       return;
     }
     setPage(safePage);
-    if (safePage === DEFAULT_PAGE) {
-      if (window.location.hash) {
-        window.history.replaceState(null, "", window.location.pathname + window.location.search);
-      }
-      return;
-    }
-    const nextHash = `#${safePage}`;
-    if (window.location.hash !== nextHash) {
-      window.location.hash = safePage;
+    const nextUrl = safePage === DEFAULT_PAGE
+      ? window.location.pathname + window.location.search
+      : `${window.location.pathname}${window.location.search}#${safePage}`;
+    const currentUrl = window.location.pathname + window.location.search + window.location.hash;
+    if (currentUrl !== nextUrl) {
+      window.history.replaceState(null, "", nextUrl);
     }
   };
 
