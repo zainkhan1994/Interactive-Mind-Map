@@ -191,17 +191,14 @@ export function LifeNodeTogglePrototype() {
 
   const navigateToPage = (nextPage) => {
     const safePage = VALID_PAGES.has(nextPage) ? nextPage : DEFAULT_PAGE;
+    setPage(safePage);
     if (typeof window === "undefined") {
-      setPage(safePage);
       return;
     }
-    setPage(safePage);
-    const nextUrl = safePage === DEFAULT_PAGE
-      ? window.location.pathname + window.location.search
-      : `${window.location.pathname}${window.location.search}#${safePage}`;
-    const currentUrl = window.location.pathname + window.location.search + window.location.hash;
-    if (currentUrl !== nextUrl) {
-      window.history.replaceState(null, "", nextUrl);
+    const nextUrl = new URL(window.location.href);
+    nextUrl.hash = safePage === DEFAULT_PAGE ? "" : safePage;
+    if (window.location.href !== nextUrl.toString()) {
+      window.history.replaceState(null, "", nextUrl.toString());
     }
   };
 
