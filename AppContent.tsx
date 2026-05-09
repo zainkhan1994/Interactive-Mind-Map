@@ -16,7 +16,7 @@ function CalendarIcon() {
   return <span className="inline mr-1">□</span>;
 }
 
-import { rawNodes } from "./hugeJSON.ts"; // we will put the json here
+import { blueprintData } from "./constants";
 
 const palette = {
   black: "bg-black text-white border-black",
@@ -25,6 +25,28 @@ const palette = {
   yellow: "bg-yellow-300 text-black border-yellow-300",
   default: "bg-black text-white border-black",
 };
+
+const COLOR_BY_CATEGORY = {
+  personal: "red",
+  health: "yellow",
+  work: "green",
+  projects: "black"
+};
+
+const rawNodes = blueprintData.map((node) => {
+  const normalizedCategory = node.category?.toLowerCase();
+  return {
+    uid: node.id,
+    name: node.name,
+    description: node.description,
+    type: node.type,
+    parentUid: node.parentId,
+    category: normalizedCategory ?? node.category,
+    color: normalizedCategory ? COLOR_BY_CATEGORY[normalizedCategory] : undefined
+  };
+});
+
+const defaultCollapsedIds = rawNodes.filter((node) => node.parentUid !== null).map((node) => node.uid);
 
 function buildTree(nodes) {
   const map = new Map(nodes.map((n) => [n.uid, { ...n, children: [] }]));
@@ -47,6 +69,7 @@ function SquareNode({ node, depth, collapsed, toggle }) {
     <div className="flex flex-col items-center relative">
       {depth > 0 && <div className="h-8 w-px bg-slate-300" />}
       <button
+        data-drag-ignore
         onClick={() => hasChildren && toggle(node.uid)}
         className={`min-w-[86px] min-h-[56px] rounded-lg border shadow-sm px-3 py-2 text-[10px] font-bold uppercase tracking-tight flex items-center justify-center gap-1 ${colorClass}`}
       >
@@ -69,11 +92,12 @@ function SquareNode({ node, depth, collapsed, toggle }) {
 
 export function LifeNodeTogglePrototype() {
   const roots = useMemo(() => buildTree(rawNodes), []);
-  const [collapsed, setCollapsed] = useState(new Set(rawNodes.filter((n) => n.parentUid !== null).map((n) => n.uid)));
+  const [collapsed, setCollapsed] = useState(() => new Set(defaultCollapsedIds));
   const [mode, setMode] = useState("map");
   const [zoom, setZoom] = useState({ scale: 1, x: 0, y: 0 });
   const containerRef = React.useRef(null);
-  const isDragging = React.useRef(false);
+  const isDraggingRef = React.useRef(false);
+  const [isDragging, setIsDragging] = useState(false);
   const dragStart = React.useRef({ x: 0, y: 0 });
 
   React.useEffect(() => {
@@ -93,21 +117,24 @@ export function LifeNodeTogglePrototype() {
 
   const handlePointerDown = (e) => {
     if (mode !== "map") return;
-    // only if they click the container background, not buttons
-    if (e.target.tagName.toLowerCase() === 'button' || e.target.closest('button')) return;
-    isDragging.current = true;
+    // only if they click the container background, not nodes
+    const target = e.target;
+    if (target instanceof Element && target.closest('[data-drag-ignore]')) return;
+    isDraggingRef.current = true;
+    setIsDragging(true);
     dragStart.current = { x: e.clientX - zoom.x, y: e.clientY - zoom.y };
     e.currentTarget.setPointerCapture(e.pointerId);
   };
 
   const handlePointerMove = (e) => {
-    if (!isDragging.current || mode !== "map") return;
+    if (!isDraggingRef.current || mode !== "map") return;
     e.preventDefault();
     setZoom(prev => ({ ...prev, x: e.clientX - dragStart.current.x, y: e.clientY - dragStart.current.y }));
   };
 
   const handlePointerUp = (e) => {
-    isDragging.current = false;
+    isDraggingRef.current = false;
+    setIsDragging(false);
     e.currentTarget.releasePointerCapture(e.pointerId);
   };
 
@@ -132,11 +159,15 @@ export function LifeNodeTogglePrototype() {
     });
   };
 
-  const showOnly = (rootId) => {
+  const showOnly = (category) => {
     const allIds = roots.flatMap(collectIds);
-    const root = roots.find((r) => r.id === rootId);
+    const root = roots.find((r) => r.category === category);
     const keepOpen = new Set(allIds);
-    if (root) collectIds(root).forEach((id) => keepOpen.delete(id));
+    if (!root) {
+      setCollapsed(new Set());
+      return;
+    }
+    collectIds(root).forEach((id) => keepOpen.delete(id));
     setCollapsed(keepOpen);
   };
 
@@ -153,10 +184,10 @@ export function LifeNodeTogglePrototype() {
         <button onClick={() => setCollapsed(new Set())} className="rounded-lg px-3 py-2 text-sm border bg-white hover:bg-slate-50 transition-colors shadow-sm">Expand All</button>
         <button onClick={() => setCollapsed(new Set(rawNodes.map((n) => n.uid)))} className="rounded-lg px-3 py-2 text-sm border bg-white hover:bg-slate-50 transition-colors shadow-sm">Collapse All</button>
         <div className="w-px h-6 bg-slate-300 mx-2" />
-        <button onClick={() => showOnly(500)} className="rounded-lg px-3 py-2 text-sm font-medium border bg-yellow-100 hover:bg-yellow-200 transition-colors border-yellow-200 text-yellow-900 shadow-sm">Health</button>
-        <button onClick={() => showOnly(600)} className="rounded-lg px-3 py-2 text-sm font-medium border bg-green-100 hover:bg-green-200 transition-colors border-green-200 text-green-900 shadow-sm">Work</button>
-        <button onClick={() => showOnly(1)} className="rounded-lg px-3 py-2 text-sm font-medium border bg-red-100 hover:bg-red-200 transition-colors border-red-200 text-red-900 shadow-sm">Personal</button>
-        <button onClick={() => showOnly(700)} className="rounded-lg px-3 py-2 text-sm font-medium border bg-slate-200 hover:bg-slate-300 transition-colors border-slate-300 text-slate-900 shadow-sm">Projects</button>
+        <button onClick={() => showOnly("health")} className="rounded-lg px-3 py-2 text-sm font-medium border bg-yellow-100 hover:bg-yellow-200 transition-colors border-yellow-200 text-yellow-900 shadow-sm">Health</button>
+        <button onClick={() => showOnly("work")} className="rounded-lg px-3 py-2 text-sm font-medium border bg-green-100 hover:bg-green-200 transition-colors border-green-200 text-green-900 shadow-sm">Work</button>
+        <button onClick={() => showOnly("personal")} className="rounded-lg px-3 py-2 text-sm font-medium border bg-red-100 hover:bg-red-200 transition-colors border-red-200 text-red-900 shadow-sm">Personal</button>
+        <button onClick={() => showOnly("projects")} className="rounded-lg px-3 py-2 text-sm font-medium border bg-slate-200 hover:bg-slate-300 transition-colors border-slate-300 text-slate-900 shadow-sm">Projects</button>
         {mode === "map" && (
           <>
             <div className="w-px h-6 bg-slate-300 mx-2" />
@@ -214,7 +245,7 @@ export function LifeNodeTogglePrototype() {
             backgroundImage: "radial-gradient(#cbd5e1 1px, transparent 1px)",
             backgroundSize: `${24 * zoom.scale}px ${24 * zoom.scale}px`,
             backgroundPosition: `${zoom.x}px ${zoom.y}px`,
-            cursor: isDragging.current ? 'grabbing' : 'grab'
+            cursor: isDragging ? 'grabbing' : 'grab'
           }}
         >
           <div 
