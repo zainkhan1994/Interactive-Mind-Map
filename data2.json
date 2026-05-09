@@ -1,0 +1,850 @@
+[
+  {
+    "uid": "31_100",
+    "id": 31,
+    "name": "Mom",
+    "description": "Mother's profile",
+    "type": "file",
+    "parentUid": "29_98"
+  },
+  {
+    "uid": "32_101",
+    "id": 32,
+    "name": "Mom Notes",
+    "description": "Notes about Mom",
+    "type": "file",
+    "parentUid": "31_100"
+  },
+  {
+    "uid": "33_102",
+    "id": 33,
+    "name": "Mom Photos",
+    "description": "Photos of Mom",
+    "type": "file",
+    "parentUid": "31_100"
+  },
+  {
+    "uid": "34_103",
+    "id": 34,
+    "name": "Dad",
+    "description": "Father's profile",
+    "type": "file",
+    "parentUid": "29_98"
+  },
+  {
+    "uid": "35_104",
+    "id": 35,
+    "name": "Dad Notes",
+    "description": "Notes about Dad",
+    "type": "file",
+    "parentUid": "34_103"
+  },
+  {
+    "uid": "36_105",
+    "id": 36,
+    "name": "Dad Photos",
+    "description": "Photos of Dad",
+    "type": "file",
+    "parentUid": "34_103"
+  },
+  {
+    "uid": "37_106",
+    "id": 37,
+    "name": "Stepmom",
+    "description": "Stepmother's profile",
+    "type": "file",
+    "parentUid": "29_98"
+  },
+  {
+    "uid": "38_107",
+    "id": 38,
+    "name": "Stepmom Notes",
+    "description": "Notes about Stepmom",
+    "type": "file",
+    "parentUid": "37_106"
+  },
+  {
+    "uid": "39_108",
+    "id": 39,
+    "name": "Stepmom Photos",
+    "description": "Photos of Stepmom",
+    "type": "file",
+    "parentUid": "37_106"
+  },
+  {
+    "uid": "40_109",
+    "id": 40,
+    "name": "Sister",
+    "description": "Sister's profile",
+    "type": "file",
+    "parentUid": "29_98"
+  },
+  {
+    "uid": "41_110",
+    "id": 41,
+    "name": "Sister Notes",
+    "description": "Notes about Sister",
+    "type": "file",
+    "parentUid": "40_109"
+  },
+  {
+    "uid": "42_111",
+    "id": 42,
+    "name": "Sister Photos",
+    "description": "Photos of Sister",
+    "type": "file",
+    "parentUid": "40_109"
+  },
+  {
+    "uid": "43_112",
+    "id": 43,
+    "name": "Brother",
+    "description": "Brother's profile",
+    "type": "file",
+    "parentUid": "29_98"
+  },
+  {
+    "uid": "44_113",
+    "id": 44,
+    "name": "Brother Notes",
+    "description": "Notes about Brother",
+    "type": "file",
+    "parentUid": "43_112"
+  },
+  {
+    "uid": "45_114",
+    "id": 45,
+    "name": "Brother Photos",
+    "description": "Photos of Brother",
+    "type": "file",
+    "parentUid": "43_112"
+  },
+  {
+    "uid": "46_115",
+    "id": 46,
+    "name": "Sister 2",
+    "description": "Second sister's profile",
+    "type": "file",
+    "parentUid": "29_98"
+  },
+  {
+    "uid": "47_116",
+    "id": 47,
+    "name": "Sister 2 Notes",
+    "description": "Notes about Sister 2",
+    "type": "file",
+    "parentUid": "46_115"
+  },
+  {
+    "uid": "48_117",
+    "id": 48,
+    "name": "Sister 2 Photos",
+    "description": "Photos of Sister 2",
+    "type": "file",
+    "parentUid": "46_115"
+  },
+  {
+    "uid": "30_99",
+    "id": 30,
+    "name": "Extended",
+    "description": "Extended family members",
+    "type": "folder",
+    "parentUid": "28_97"
+  },
+  {
+    "uid": "49_118",
+    "id": 49,
+    "name": "Sister in Law",
+    "description": "Sister-in-law's profile",
+    "type": "file",
+    "parentUid": "30_99"
+  },
+  {
+    "uid": "50_119",
+    "id": 50,
+    "name": "Sister in Law Notes",
+    "description": "Notes about Sister-in-law",
+    "type": "file",
+    "parentUid": "49_118"
+  },
+  {
+    "uid": "51_120",
+    "id": 51,
+    "name": "Sister in Law Photos",
+    "description": "Photos of Sister-in-law",
+    "type": "file",
+    "parentUid": "49_118"
+  },
+  {
+    "uid": "52_121",
+    "id": 52,
+    "name": "Brother in Law",
+    "description": "Brother-in-law's profile",
+    "type": "file",
+    "parentUid": "30_99"
+  },
+  {
+    "uid": "53_122",
+    "id": 53,
+    "name": "Brother in Law Notes",
+    "description": "Notes about Brother-in-law",
+    "type": "file",
+    "parentUid": "52_121"
+  },
+  {
+    "uid": "54_123",
+    "id": 54,
+    "name": "Brother in Law Photos",
+    "description": "Photos of Brother-in-law",
+    "type": "file",
+    "parentUid": "52_121"
+  },
+  {
+    "uid": "55_124",
+    "id": 55,
+    "name": "Nephew",
+    "description": "Nephew's profile (Brother + Sister-in-law's child)",
+    "type": "file",
+    "parentUid": "30_99"
+  },
+  {
+    "uid": "56_125",
+    "id": 56,
+    "name": "Nephew Notes",
+    "description": "Notes about Nephew",
+    "type": "file",
+    "parentUid": "55_124"
+  },
+  {
+    "uid": "57_126",
+    "id": 57,
+    "name": "Nephew Photos",
+    "description": "Photos of Nephew",
+    "type": "file",
+    "parentUid": "55_124"
+  },
+  {
+    "uid": "58_127",
+    "id": 58,
+    "name": "Niece 1",
+    "description": "First niece's profile",
+    "type": "file",
+    "parentUid": "30_99"
+  },
+  {
+    "uid": "59_128",
+    "id": 59,
+    "name": "Niece 1 Notes",
+    "description": "Notes about Niece 1",
+    "type": "file",
+    "parentUid": "58_127"
+  },
+  {
+    "uid": "60_129",
+    "id": 60,
+    "name": "Niece 1 Photos",
+    "description": "Photos of Niece 1",
+    "type": "file",
+    "parentUid": "58_127"
+  },
+  {
+    "uid": "61_130",
+    "id": 61,
+    "name": "Niece 2",
+    "description": "Second niece's profile",
+    "type": "file",
+    "parentUid": "30_99"
+  },
+  {
+    "uid": "62_131",
+    "id": 62,
+    "name": "Niece 2 Notes",
+    "description": "Notes about Niece 2",
+    "type": "file",
+    "parentUid": "61_130"
+  },
+  {
+    "uid": "63_132",
+    "id": 63,
+    "name": "Niece 2 Photos",
+    "description": "Photos of Niece 2",
+    "type": "file",
+    "parentUid": "61_130"
+  },
+  {
+    "uid": "64_133",
+    "id": 64,
+    "name": "Nephew 2",
+    "description": "Second nephew's profile (Sister + Brother-in-law's children)",
+    "type": "file",
+    "parentUid": "30_99"
+  },
+  {
+    "uid": "65_134",
+    "id": 65,
+    "name": "Nephew 2 Notes",
+    "description": "Notes about Nephew 2",
+    "type": "file",
+    "parentUid": "64_133"
+  },
+  {
+    "uid": "66_135",
+    "id": 66,
+    "name": "Nephew 2 Photos",
+    "description": "Photos of Nephew 2",
+    "type": "file",
+    "parentUid": "64_133"
+  },
+  {
+    "uid": "67_136",
+    "id": 67,
+    "name": "Attributes",
+    "description": "Relationship metadata",
+    "type": "folder",
+    "parentUid": "28_97"
+  },
+  {
+    "uid": "68_137",
+    "id": 68,
+    "name": "Connection Type",
+    "description": "",
+    "type": "file",
+    "parentUid": "67_136"
+  },
+  {
+    "uid": "69_138",
+    "id": 69,
+    "name": "Residence Status",
+    "description": "",
+    "type": "file",
+    "parentUid": "67_136"
+  },
+  {
+    "uid": "70_139",
+    "id": 70,
+    "name": "Contact Frequency",
+    "description": "",
+    "type": "file",
+    "parentUid": "67_136"
+  },
+  {
+    "uid": "71_140",
+    "id": 71,
+    "name": "Support Role",
+    "description": "",
+    "type": "file",
+    "parentUid": "67_136"
+  },
+  {
+    "uid": "72_141",
+    "id": 72,
+    "name": "Shared Responsibilities",
+    "description": "",
+    "type": "file",
+    "parentUid": "67_136"
+  },
+  {
+    "uid": "73_142",
+    "id": 73,
+    "name": "Groups",
+    "description": "Relationship clusters auto-generated by assistant",
+    "type": "folder",
+    "parentUid": "28_97"
+  },
+  {
+    "uid": "74_143",
+    "id": 74,
+    "name": "Parents (Mom, Dad, Stepmom)",
+    "description": "",
+    "type": "file",
+    "parentUid": "73_142"
+  },
+  {
+    "uid": "75_144",
+    "id": 75,
+    "name": "Siblings (Sister, Brother, Sister 2)",
+    "description": "",
+    "type": "file",
+    "parentUid": "73_142"
+  },
+  {
+    "uid": "76_145",
+    "id": 76,
+    "name": "In Laws (Sister in Law, Brother in Law)",
+    "description": "",
+    "type": "file",
+    "parentUid": "73_142"
+  },
+  {
+    "uid": "77_146",
+    "id": 77,
+    "name": "Kids (All nieces and nephews)",
+    "description": "",
+    "type": "file",
+    "parentUid": "73_142"
+  },
+  {
+    "uid": "78_147",
+    "id": 78,
+    "name": "Extended (Uncles, aunts, cousins – optional future expansion)",
+    "description": "",
+    "type": "file",
+    "parentUid": "73_142"
+  },
+  {
+    "uid": "79_148",
+    "id": 79,
+    "name": "Friends",
+    "description": "Personal friendships and social connections",
+    "type": "folder",
+    "parentUid": "27_96"
+  },
+  {
+    "uid": "80_149",
+    "id": 80,
+    "name": "Childhood",
+    "description": "Friends from childhood",
+    "type": "folder",
+    "parentUid": "79_148"
+  },
+  {
+    "uid": "81_150",
+    "id": 81,
+    "name": "High School",
+    "description": "High school friends",
+    "type": "folder",
+    "parentUid": "79_148"
+  },
+  {
+    "uid": "82_151",
+    "id": 82,
+    "name": "College",
+    "description": "College friends",
+    "type": "folder",
+    "parentUid": "79_148"
+  },
+  {
+    "uid": "83_152",
+    "id": 83,
+    "name": "Events",
+    "description": "Friends from events (SpaceApps, NASA, etc.)",
+    "type": "folder",
+    "parentUid": "79_148"
+  },
+  {
+    "uid": "84_153",
+    "id": 84,
+    "name": "Religious Community",
+    "description": "Muslim Network and religious community",
+    "type": "folder",
+    "parentUid": "79_148"
+  },
+  {
+    "uid": "85_154",
+    "id": 85,
+    "name": "Current Acquaintances",
+    "description": "Current social acquaintances",
+    "type": "folder",
+    "parentUid": "79_148"
+  },
+  {
+    "uid": "86_155",
+    "id": 86,
+    "name": "Professional Network",
+    "description": "Professional connections and colleagues",
+    "type": "folder",
+    "parentUid": "27_96"
+  },
+  {
+    "uid": "87_156",
+    "id": 87,
+    "name": "Mentors",
+    "description": "Professional mentors and advisors",
+    "type": "folder",
+    "parentUid": "86_155"
+  },
+  {
+    "uid": "88_157",
+    "id": 88,
+    "name": "Collaborators",
+    "description": "Professional collaborators and partners",
+    "type": "folder",
+    "parentUid": "86_155"
+  },
+  {
+    "uid": "89_158",
+    "id": 89,
+    "name": "Clients",
+    "description": "Professional clients and business contacts",
+    "type": "folder",
+    "parentUid": "86_155"
+  },
+  {
+    "uid": "90_159",
+    "id": 90,
+    "name": "Applications",
+    "description": "Mobile and desktop applications",
+    "type": "folder",
+    "parentUid": "1_0"
+  },
+  {
+    "uid": "91_160",
+    "id": 91,
+    "name": "Social Community",
+    "description": "Social media and community apps",
+    "type": "folder",
+    "parentUid": "90_159"
+  },
+  {
+    "uid": "92_161",
+    "id": 92,
+    "name": "Direct Messaging",
+    "description": "Direct messaging applications",
+    "type": "folder",
+    "parentUid": "91_160"
+  },
+  {
+    "uid": "93_162",
+    "id": 93,
+    "name": "iMessage",
+    "description": "Apple iMessage",
+    "type": "file",
+    "parentUid": "92_161"
+  },
+  {
+    "uid": "94_163",
+    "id": 94,
+    "name": "FaceTime",
+    "description": "Apple FaceTime",
+    "type": "file",
+    "parentUid": "92_161"
+  },
+  {
+    "uid": "95_164",
+    "id": 95,
+    "name": "TextMe",
+    "description": "TextMe messaging app",
+    "type": "file",
+    "parentUid": "92_161"
+  },
+  {
+    "uid": "96_165",
+    "id": 96,
+    "name": "TextFree",
+    "description": "TextFree messaging app",
+    "type": "file",
+    "parentUid": "92_161"
+  },
+  {
+    "uid": "97_166",
+    "id": 97,
+    "name": "WhatsApp",
+    "description": "WhatsApp messaging",
+    "type": "file",
+    "parentUid": "92_161"
+  },
+  {
+    "uid": "98_167",
+    "id": 98,
+    "name": "Facebook Messenger",
+    "description": "Facebook Messenger",
+    "type": "file",
+    "parentUid": "92_161"
+  },
+  {
+    "uid": "99_168",
+    "id": 99,
+    "name": "Discord",
+    "description": "Discord chat platform",
+    "type": "file",
+    "parentUid": "92_161"
+  },
+  {
+    "uid": "100_169",
+    "id": 100,
+    "name": "Slack",
+    "description": "Slack workspace communication",
+    "type": "file",
+    "parentUid": "92_161"
+  },
+  {
+    "uid": "101_170",
+    "id": 101,
+    "name": "Communities Groups",
+    "description": "Community and group platforms",
+    "type": "folder",
+    "parentUid": "91_160"
+  },
+  {
+    "uid": "102_171",
+    "id": 102,
+    "name": "Skool",
+    "description": "Skool community platform",
+    "type": "file",
+    "parentUid": "101_170"
+  },
+  {
+    "uid": "103_172",
+    "id": 103,
+    "name": "Mighty",
+    "description": "Mighty community platform",
+    "type": "file",
+    "parentUid": "101_170"
+  },
+  {
+    "uid": "104_173",
+    "id": 104,
+    "name": "Reddit",
+    "description": "Reddit social platform",
+    "type": "file",
+    "parentUid": "101_170"
+  },
+  {
+    "uid": "105_174",
+    "id": 105,
+    "name": "Meetup",
+    "description": "Meetup event platform",
+    "type": "file",
+    "parentUid": "101_170"
+  },
+  {
+    "uid": "106_175",
+    "id": 106,
+    "name": "Eventbrite",
+    "description": "Eventbrite event platform",
+    "type": "file",
+    "parentUid": "101_170"
+  },
+  {
+    "uid": "107_176",
+    "id": 107,
+    "name": "LinkedIn Events",
+    "description": "LinkedIn Events",
+    "type": "file",
+    "parentUid": "101_170"
+  },
+  {
+    "uid": "108_177",
+    "id": 108,
+    "name": "Meta Events",
+    "description": "Meta Events",
+    "type": "file",
+    "parentUid": "101_170"
+  },
+  {
+    "uid": "109_178",
+    "id": 109,
+    "name": "Faves",
+    "description": "Faves community app",
+    "type": "file",
+    "parentUid": "101_170"
+  },
+  {
+    "uid": "110_179",
+    "id": 110,
+    "name": "Social Media",
+    "description": "Social media platforms",
+    "type": "folder",
+    "parentUid": "91_160"
+  },
+  {
+    "uid": "111_180",
+    "id": 111,
+    "name": "Instagram",
+    "description": "Instagram social platform",
+    "type": "file",
+    "parentUid": "110_179"
+  },
+  {
+    "uid": "112_181",
+    "id": 112,
+    "name": "TikTok",
+    "description": "TikTok video platform",
+    "type": "file",
+    "parentUid": "110_179"
+  },
+  {
+    "uid": "113_182",
+    "id": 113,
+    "name": "Snapchat",
+    "description": "Snapchat messaging",
+    "type": "file",
+    "parentUid": "110_179"
+  },
+  {
+    "uid": "114_183",
+    "id": 114,
+    "name": "Facebook",
+    "description": "Facebook social platform",
+    "type": "file",
+    "parentUid": "110_179"
+  },
+  {
+    "uid": "115_184",
+    "id": 115,
+    "name": "YouTube",
+    "description": "YouTube video platform",
+    "type": "file",
+    "parentUid": "110_179"
+  },
+  {
+    "uid": "116_185",
+    "id": 116,
+    "name": "Threads",
+    "description": "Threads social platform",
+    "type": "file",
+    "parentUid": "110_179"
+  },
+  {
+    "uid": "117_186",
+    "id": 117,
+    "name": "Productivity Organization",
+    "description": "Productivity and organization apps",
+    "type": "folder",
+    "parentUid": "90_159"
+  },
+  {
+    "uid": "118_187",
+    "id": 118,
+    "name": "Planning Notes",
+    "description": "Planning and note-taking apps",
+    "type": "folder",
+    "parentUid": "117_186"
+  },
+  {
+    "uid": "119_188",
+    "id": 119,
+    "name": "Notion",
+    "description": "Notion workspace",
+    "type": "file",
+    "parentUid": "118_187"
+  },
+  {
+    "uid": "120_189",
+    "id": 120,
+    "name": "Obsidian",
+    "description": "Obsidian note-taking",
+    "type": "file",
+    "parentUid": "118_187"
+  },
+  {
+    "uid": "121_190",
+    "id": 121,
+    "name": "Apple Notes",
+    "description": "Apple Notes app",
+    "type": "file",
+    "parentUid": "118_187"
+  },
+  {
+    "uid": "122_191",
+    "id": 122,
+    "name": "Google Tasks",
+    "description": "Google Tasks",
+    "type": "file",
+    "parentUid": "118_187"
+  },
+  {
+    "uid": "123_192",
+    "id": 123,
+    "name": "Reminders",
+    "description": "Apple Reminders",
+    "type": "file",
+    "parentUid": "118_187"
+  },
+  {
+    "uid": "124_193",
+    "id": 124,
+    "name": "Calendar",
+    "description": "Calendar applications",
+    "type": "file",
+    "parentUid": "118_187"
+  },
+  {
+    "uid": "125_194",
+    "id": 125,
+    "name": "Project Management",
+    "description": "Project management and collaboration",
+    "type": "folder",
+    "parentUid": "117_186"
+  },
+  {
+    "uid": "126_195",
+    "id": 126,
+    "name": "Asana",
+    "description": "Asana project management",
+    "type": "file",
+    "parentUid": "125_194"
+  },
+  {
+    "uid": "127_196",
+    "id": 127,
+    "name": "Miro",
+    "description": "Miro collaboration platform",
+    "type": "file",
+    "parentUid": "125_194"
+  },
+  {
+    "uid": "128_197",
+    "id": 128,
+    "name": "GitHub",
+    "description": "GitHub development platform",
+    "type": "file",
+    "parentUid": "125_194"
+  },
+  {
+    "uid": "129_198",
+    "id": 129,
+    "name": "Google Cloud",
+    "description": "Google Cloud platform",
+    "type": "file",
+    "parentUid": "125_194"
+  },
+  {
+    "uid": "130_199",
+    "id": 130,
+    "name": "Automation Tools",
+    "description": "Automation and productivity tools",
+    "type": "folder",
+    "parentUid": "117_186"
+  },
+  {
+    "uid": "131_200",
+    "id": 131,
+    "name": "IFTTT",
+    "description": "IFTTT automation",
+    "type": "file",
+    "parentUid": "130_199"
+  },
+  {
+    "uid": "132_201",
+    "id": 132,
+    "name": "Shortcuts",
+    "description": "Apple Shortcuts",
+    "type": "file",
+    "parentUid": "130_199"
+  },
+  {
+    "uid": "133_202",
+    "id": 133,
+    "name": "Scriptable",
+    "description": "Scriptable automation",
+    "type": "file",
+    "parentUid": "130_199"
+  },
+  {
+    "uid": "134_203",
+    "id": 134,
+    "name": "Pythonista",
+    "description": "Pythonista Python IDE",
+    "type": "file",
+    "parentUid": "130_199"
+  },
+  {
+    "uid": "135_204",
+    "id": 135,
+    "name": "Fireflies",
+    "description": "Fireflies AI meeting assistant",
+    "type": "file",
+    "parentUid": "130_199"
+  }
+]

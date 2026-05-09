@@ -1,0 +1,798 @@
+[
+  {
+    "uid": "1_0",
+    "id": 1,
+    "name": "P - Personal",
+    "description": "Life, Home, ID, Contacts, Events",
+    "type": "folder",
+    "parentUid": null,
+    "color": "red"
+  },
+  {
+    "uid": "500_1",
+    "id": 500,
+    "name": "H - Health",
+    "description": "Medical, mental, and personal wellness information",
+    "type": "folder",
+    "parentUid": null,
+    "color": "yellow"
+  },
+  {
+    "uid": "600_2",
+    "id": 600,
+    "name": "W - Work",
+    "description": "Professional work history, employers, projects, and portfolio",
+    "type": "folder",
+    "parentUid": null,
+    "color": "green"
+  },
+  {
+    "uid": "700_3",
+    "id": 700,
+    "name": "P - Projects",
+    "description": "Personal and professional development projects",
+    "type": "folder",
+    "parentUid": null,
+    "color": "black"
+  },
+  {
+    "uid": "501_4",
+    "id": 501,
+    "name": "Medical Records",
+    "description": "Doctors, conditions, symptoms, and test history",
+    "type": "folder",
+    "parentUid": "500_1"
+  },
+  {
+    "uid": "502_5",
+    "id": 502,
+    "name": "Doctors and Providers",
+    "description": "Contacts, specialties, visit notes",
+    "type": "folder",
+    "parentUid": "501_4"
+  },
+  {
+    "uid": "503_6",
+    "id": 503,
+    "name": "Conditions and Symptoms",
+    "description": "Diagnoses, recurring issues, notes",
+    "type": "folder",
+    "parentUid": "501_4"
+  },
+  {
+    "uid": "504_7",
+    "id": 504,
+    "name": "Lab Results and Tests",
+    "description": "Reports and uploads from labs",
+    "type": "folder",
+    "parentUid": "501_4"
+  },
+  {
+    "uid": "505_8",
+    "id": 505,
+    "name": "LabCorp",
+    "description": "LabCorp test results",
+    "type": "file",
+    "parentUid": "504_7"
+  },
+  {
+    "uid": "506_9",
+    "id": 506,
+    "name": "Quest Diagnostics",
+    "description": "Quest Diagnostics test results",
+    "type": "file",
+    "parentUid": "504_7"
+  },
+  {
+    "uid": "507_10",
+    "id": 507,
+    "name": "Other Labs",
+    "description": "Other laboratory test results",
+    "type": "file",
+    "parentUid": "504_7"
+  },
+  {
+    "uid": "508_11",
+    "id": 508,
+    "name": "Timeline and Notes",
+    "description": "Chronological medical events and reflections",
+    "type": "folder",
+    "parentUid": "501_4"
+  },
+  {
+    "uid": "509_12",
+    "id": 509,
+    "name": "Medications and Supplements",
+    "description": "Current, past, and scheduled intake",
+    "type": "folder",
+    "parentUid": "500_1"
+  },
+  {
+    "uid": "510_13",
+    "id": 510,
+    "name": "Active Medications",
+    "description": "Currently prescribed medications",
+    "type": "file",
+    "parentUid": "509_12"
+  },
+  {
+    "uid": "511_14",
+    "id": 511,
+    "name": "Past Treatments",
+    "description": "Previous medications and treatments",
+    "type": "file",
+    "parentUid": "509_12"
+  },
+  {
+    "uid": "512_15",
+    "id": 512,
+    "name": "Supplements",
+    "description": "Vitamins and dietary supplements",
+    "type": "file",
+    "parentUid": "509_12"
+  },
+  {
+    "uid": "513_16",
+    "id": 513,
+    "name": "Dosage and Schedule",
+    "description": "Medication schedules and dosages",
+    "type": "file",
+    "parentUid": "509_12"
+  },
+  {
+    "uid": "514_17",
+    "id": 514,
+    "name": "Insurance and Coverage",
+    "description": "Policies, claims, and provider networks",
+    "type": "folder",
+    "parentUid": "500_1"
+  },
+  {
+    "uid": "515_18",
+    "id": 515,
+    "name": "Health Insurance Policies",
+    "description": "Health insurance policy information",
+    "type": "file",
+    "parentUid": "514_17"
+  },
+  {
+    "uid": "516_19",
+    "id": 516,
+    "name": "Claims and EOBs",
+    "description": "Insurance claims and explanation of benefits",
+    "type": "file",
+    "parentUid": "514_17"
+  },
+  {
+    "uid": "517_20",
+    "id": 517,
+    "name": "Provider Network Info",
+    "description": "In-network provider information",
+    "type": "file",
+    "parentUid": "514_17"
+  },
+  {
+    "uid": "518_21",
+    "id": 518,
+    "name": "Mental Health",
+    "description": "Therapy, emotional tracking, and self-reflection",
+    "type": "folder",
+    "parentUid": "500_1"
+  },
+  {
+    "uid": "519_22",
+    "id": 519,
+    "name": "Therapy Notes",
+    "description": "Therapy session notes and insights",
+    "type": "file",
+    "parentUid": "518_21"
+  },
+  {
+    "uid": "520_23",
+    "id": 520,
+    "name": "Mood Tracking",
+    "description": "Emotional and mood tracking data",
+    "type": "file",
+    "parentUid": "518_21"
+  },
+  {
+    "uid": "521_24",
+    "id": 521,
+    "name": "Reflections",
+    "description": "Personal reflections and journaling",
+    "type": "file",
+    "parentUid": "518_21"
+  },
+  {
+    "uid": "522_25",
+    "id": 522,
+    "name": "Health Apps",
+    "description": "Linked apps and digital health platforms",
+    "type": "folder",
+    "parentUid": "500_1"
+  },
+  {
+    "uid": "523_26",
+    "id": 523,
+    "name": "MyChart",
+    "description": "MyChart health portal",
+    "type": "file",
+    "parentUid": "522_25"
+  },
+  {
+    "uid": "524_27",
+    "id": 524,
+    "name": "Healow",
+    "description": "Healow health app",
+    "type": "file",
+    "parentUid": "522_25"
+  },
+  {
+    "uid": "525_28",
+    "id": 525,
+    "name": "PT Solutions",
+    "description": "PT Solutions physical therapy",
+    "type": "file",
+    "parentUid": "522_25"
+  },
+  {
+    "uid": "526_29",
+    "id": 526,
+    "name": "BetterSleep",
+    "description": "BetterSleep app",
+    "type": "file",
+    "parentUid": "522_25"
+  },
+  {
+    "uid": "527_30",
+    "id": 527,
+    "name": "Life Time",
+    "description": "Life Time fitness",
+    "type": "file",
+    "parentUid": "522_25"
+  },
+  {
+    "uid": "601_31",
+    "id": 601,
+    "name": "Work Timeline",
+    "description": "Chronological work history and career progression",
+    "type": "folder",
+    "parentUid": "600_2"
+  },
+  {
+    "uid": "602_32",
+    "id": 602,
+    "name": "Employers",
+    "description": "All employers and organizations worked with",
+    "type": "folder",
+    "parentUid": "600_2"
+  },
+  {
+    "uid": "603_33",
+    "id": 603,
+    "name": "R-Cubed",
+    "description": "R-Cubed employment and projects",
+    "type": "folder",
+    "parentUid": "602_32"
+  },
+  {
+    "uid": "6031_34",
+    "id": 6031,
+    "name": "Pay Stubs Benefits",
+    "description": "Pay stubs, benefits, and employment documents",
+    "type": "folder",
+    "parentUid": "603_33"
+  },
+  {
+    "uid": "6032_35",
+    "id": 6032,
+    "name": "Business Documents",
+    "description": "Company documents, branding, and official records",
+    "type": "folder",
+    "parentUid": "603_33"
+  },
+  {
+    "uid": "6033_36",
+    "id": 6033,
+    "name": "Cleverly Dashboard Data",
+    "description": "Cleverly dashboard exports and analytics",
+    "type": "folder",
+    "parentUid": "603_33"
+  },
+  {
+    "uid": "6034_37",
+    "id": 6034,
+    "name": "LinkedIn Social Media",
+    "description": "LinkedIn analytics and social media data",
+    "type": "folder",
+    "parentUid": "603_33"
+  },
+  {
+    "uid": "6035_38",
+    "id": 6035,
+    "name": "Meeting Calendar Data",
+    "description": "Meeting schedules, calendar exports, and Jim's calendar",
+    "type": "folder",
+    "parentUid": "603_33"
+  },
+  {
+    "uid": "6036_39",
+    "id": 6036,
+    "name": "Microsoft Teams OneDrive",
+    "description": "Teams chats and OneDrive media files",
+    "type": "folder",
+    "parentUid": "603_33"
+  },
+  {
+    "uid": "6037_40",
+    "id": 6037,
+    "name": "Sales Pipeline Data",
+    "description": "Sales pipeline, territory lists, and qualification guidelines",
+    "type": "folder",
+    "parentUid": "603_33"
+  },
+  {
+    "uid": "6038_41",
+    "id": 6038,
+    "name": "Business Development",
+    "description": "Business development strategies and planning documents",
+    "type": "folder",
+    "parentUid": "603_33"
+  },
+  {
+    "uid": "6039_42",
+    "id": 6039,
+    "name": "Marketing GTM",
+    "description": "Marketing materials, GTM assets, and Oracle overviews",
+    "type": "folder",
+    "parentUid": "603_33"
+  },
+  {
+    "uid": "6040_43",
+    "id": 6040,
+    "name": "Partner Contact Data",
+    "description": "Partner contacts, collaboration accounts, and client success",
+    "type": "folder",
+    "parentUid": "603_33"
+  },
+  {
+    "uid": "6041_44",
+    "id": 6041,
+    "name": "Lead Generation Data",
+    "description": "Lead generation, Apollo data, and suggested contacts",
+    "type": "folder",
+    "parentUid": "603_33"
+  },
+  {
+    "uid": "6042_45",
+    "id": 6042,
+    "name": "Website Planning",
+    "description": "Website requirements, search history, and Zoom recordings",
+    "type": "folder",
+    "parentUid": "603_33"
+  },
+  {
+    "uid": "604_46",
+    "id": 604,
+    "name": "Red River Development",
+    "description": "Red River Development employment",
+    "type": "folder",
+    "parentUid": "602_32"
+  },
+  {
+    "uid": "605_47",
+    "id": 605,
+    "name": "Trulo Homes",
+    "description": "Trulo Homes employment across multiple locations",
+    "type": "folder",
+    "parentUid": "602_32"
+  },
+  {
+    "uid": "606_48",
+    "id": 606,
+    "name": "Trulo Homes Bentoville",
+    "description": "Trulo Homes - Bentoville location",
+    "type": "folder",
+    "parentUid": "605_47"
+  },
+  {
+    "uid": "607_49",
+    "id": 607,
+    "name": "Trulo Homes Jenks",
+    "description": "Trulo Homes - Jenks location",
+    "type": "folder",
+    "parentUid": "605_47"
+  },
+  {
+    "uid": "608_50",
+    "id": 608,
+    "name": "Trulo Homes Whitestone",
+    "description": "Trulo Homes - Whitestone location",
+    "type": "folder",
+    "parentUid": "605_47"
+  },
+  {
+    "uid": "609_51",
+    "id": 609,
+    "name": "Trulo Homes Kansas City",
+    "description": "Trulo Homes - Kansas City location",
+    "type": "folder",
+    "parentUid": "605_47"
+  },
+  {
+    "uid": "610_52",
+    "id": 610,
+    "name": "Rose Rock Development",
+    "description": "Rose Rock Development employment",
+    "type": "folder",
+    "parentUid": "602_32"
+  },
+  {
+    "uid": "611_53",
+    "id": 611,
+    "name": "Reunion",
+    "description": "Reunion project",
+    "type": "folder",
+    "parentUid": "610_52"
+  },
+  {
+    "uid": "612_54",
+    "id": 612,
+    "name": "Palace",
+    "description": "Palace project",
+    "type": "folder",
+    "parentUid": "610_52"
+  },
+  {
+    "uid": "613_55",
+    "id": 613,
+    "name": "Adams",
+    "description": "Adams project",
+    "type": "folder",
+    "parentUid": "610_52"
+  },
+  {
+    "uid": "614_56",
+    "id": 614,
+    "name": "Vandever",
+    "description": "Vandever project",
+    "type": "folder",
+    "parentUid": "610_52"
+  },
+  {
+    "uid": "615_57",
+    "id": 615,
+    "name": "Minaret Foundation",
+    "description": "Minaret Foundation employment",
+    "type": "folder",
+    "parentUid": "602_32"
+  },
+  {
+    "uid": "616_58",
+    "id": 616,
+    "name": "Ashford Communities",
+    "description": "Ashford Communities employment",
+    "type": "folder",
+    "parentUid": "602_32"
+  },
+  {
+    "uid": "617_59",
+    "id": 617,
+    "name": "US Census Bureau",
+    "description": "US Census Bureau employment",
+    "type": "folder",
+    "parentUid": "602_32"
+  },
+  {
+    "uid": "618_60",
+    "id": 618,
+    "name": "Gulf Coast Regional Blood Center",
+    "description": "Gulf Coast Regional Blood Center employment",
+    "type": "folder",
+    "parentUid": "602_32"
+  },
+  {
+    "uid": "619_61",
+    "id": 619,
+    "name": "ISGH",
+    "description": "Islamic Society of Greater Houston employment",
+    "type": "folder",
+    "parentUid": "602_32"
+  },
+  {
+    "uid": "620_62",
+    "id": 620,
+    "name": "Maryam Islamic Center",
+    "description": "Maryam Islamic Center employment",
+    "type": "folder",
+    "parentUid": "619_61"
+  },
+  {
+    "uid": "621_63",
+    "id": 621,
+    "name": "Work Projects",
+    "description": "Professional projects and deliverables",
+    "type": "folder",
+    "parentUid": "600_2"
+  },
+  {
+    "uid": "622_64",
+    "id": 622,
+    "name": "Tools",
+    "description": "Work-related tools and software",
+    "type": "folder",
+    "parentUid": "600_2"
+  },
+  {
+    "uid": "623_65",
+    "id": 623,
+    "name": "Work Portfolio",
+    "description": "Professional portfolio and achievements",
+    "type": "folder",
+    "parentUid": "600_2"
+  },
+  {
+    "uid": "701_66",
+    "id": 701,
+    "name": "SFA",
+    "description": "SFA project documentation and resources",
+    "type": "folder",
+    "parentUid": "700_3"
+  },
+  {
+    "uid": "702_67",
+    "id": 702,
+    "name": "SpaceApps",
+    "description": "NASA Space Apps Challenge projects",
+    "type": "folder",
+    "parentUid": "700_3"
+  },
+  {
+    "uid": "703_68",
+    "id": 703,
+    "name": "NASA JSC",
+    "description": "NASA Johnson Space Center projects",
+    "type": "folder",
+    "parentUid": "700_3"
+  },
+  {
+    "uid": "704_69",
+    "id": 704,
+    "name": "Hackathons",
+    "description": "Hackathon projects and competitions",
+    "type": "folder",
+    "parentUid": "700_3"
+  },
+  {
+    "uid": "705_70",
+    "id": 705,
+    "name": "Xain Dev",
+    "description": "Xain development projects and personal coding",
+    "type": "folder",
+    "parentUid": "700_3"
+  },
+  {
+    "uid": "2_71",
+    "id": 2,
+    "name": "Important Documents",
+    "description": "Core records and IDs",
+    "type": "folder",
+    "parentUid": "1_0"
+  },
+  {
+    "uid": "3_72",
+    "id": 3,
+    "name": "Identity Records",
+    "description": "Official identification documents",
+    "type": "folder",
+    "parentUid": "2_71"
+  },
+  {
+    "uid": "4_73",
+    "id": 4,
+    "name": "Passport",
+    "description": "",
+    "type": "file",
+    "parentUid": "3_72"
+  },
+  {
+    "uid": "5_74",
+    "id": 5,
+    "name": "Drivers License",
+    "description": "",
+    "type": "file",
+    "parentUid": "3_72"
+  },
+  {
+    "uid": "6_75",
+    "id": 6,
+    "name": "Social Security Card",
+    "description": "",
+    "type": "file",
+    "parentUid": "3_72"
+  },
+  {
+    "uid": "7_76",
+    "id": 7,
+    "name": "Birth Certificate",
+    "description": "",
+    "type": "file",
+    "parentUid": "3_72"
+  },
+  {
+    "uid": "8_77",
+    "id": 8,
+    "name": "Voter Registration",
+    "description": "",
+    "type": "file",
+    "parentUid": "3_72"
+  },
+  {
+    "uid": "9_78",
+    "id": 9,
+    "name": "Medical Records",
+    "description": "Health summaries and insurance info",
+    "type": "folder",
+    "parentUid": "2_71"
+  },
+  {
+    "uid": "10_79",
+    "id": 10,
+    "name": "Immunization Records",
+    "description": "",
+    "type": "file",
+    "parentUid": "9_78"
+  },
+  {
+    "uid": "11_80",
+    "id": 11,
+    "name": "Health Insurance Cards",
+    "description": "",
+    "type": "file",
+    "parentUid": "9_78"
+  },
+  {
+    "uid": "12_81",
+    "id": 12,
+    "name": "Primary Care Notes",
+    "description": "",
+    "type": "file",
+    "parentUid": "9_78"
+  },
+  {
+    "uid": "13_82",
+    "id": 13,
+    "name": "Legal Documents",
+    "description": "Contracts, agreements, authorizations",
+    "type": "folder",
+    "parentUid": "2_71"
+  },
+  {
+    "uid": "14_83",
+    "id": 14,
+    "name": "Lease Agreements",
+    "description": "",
+    "type": "file",
+    "parentUid": "13_82"
+  },
+  {
+    "uid": "15_84",
+    "id": 15,
+    "name": "Power of Attorney",
+    "description": "",
+    "type": "file",
+    "parentUid": "13_82"
+  },
+  {
+    "uid": "16_85",
+    "id": 16,
+    "name": "Wills Trusts",
+    "description": "",
+    "type": "file",
+    "parentUid": "13_82"
+  },
+  {
+    "uid": "17_86",
+    "id": 17,
+    "name": "NDAs Employment Contracts",
+    "description": "",
+    "type": "file",
+    "parentUid": "13_82"
+  },
+  {
+    "uid": "18_87",
+    "id": 18,
+    "name": "Tax Records",
+    "description": "Annual filings and statements",
+    "type": "folder",
+    "parentUid": "2_71"
+  },
+  {
+    "uid": "19_88",
+    "id": 19,
+    "name": "W2 Forms",
+    "description": "",
+    "type": "file",
+    "parentUid": "18_87"
+  },
+  {
+    "uid": "20_89",
+    "id": 20,
+    "name": "1099 Forms",
+    "description": "",
+    "type": "file",
+    "parentUid": "18_87"
+  },
+  {
+    "uid": "21_90",
+    "id": 21,
+    "name": "IRS Returns",
+    "description": "",
+    "type": "file",
+    "parentUid": "18_87"
+  },
+  {
+    "uid": "22_91",
+    "id": 22,
+    "name": "Insurance",
+    "description": "Coverage documents",
+    "type": "folder",
+    "parentUid": "2_71"
+  },
+  {
+    "uid": "23_92",
+    "id": 23,
+    "name": "Auto Insurance",
+    "description": "",
+    "type": "file",
+    "parentUid": "22_91"
+  },
+  {
+    "uid": "24_93",
+    "id": 24,
+    "name": "Health Insurance",
+    "description": "",
+    "type": "file",
+    "parentUid": "22_91"
+  },
+  {
+    "uid": "25_94",
+    "id": 25,
+    "name": "Life Insurance",
+    "description": "",
+    "type": "file",
+    "parentUid": "22_91"
+  },
+  {
+    "uid": "26_95",
+    "id": 26,
+    "name": "Renters or Homeowners",
+    "description": "",
+    "type": "file",
+    "parentUid": "22_91"
+  },
+  {
+    "uid": "27_96",
+    "id": 27,
+    "name": "Contacts Network",
+    "description": "Personal and professional connections",
+    "type": "folder",
+    "parentUid": "1_0"
+  },
+  {
+    "uid": "28_97",
+    "id": 28,
+    "name": "Family",
+    "description": "Family member profiles",
+    "type": "folder",
+    "parentUid": "27_96"
+  },
+  {
+    "uid": "29_98",
+    "id": 29,
+    "name": "Immediate",
+    "description": "Immediate family members",
+    "type": "folder",
+    "parentUid": "28_97"
+  }
+]

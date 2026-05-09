@@ -1,0 +1,338 @@
+[
+  {
+    "uid": "136_205",
+    "id": 136,
+    "name": "Finance",
+    "description": "Financial and payment applications",
+    "type": "folder",
+    "parentUid": "90_159"
+  },
+  {
+    "uid": "137_206",
+    "id": 137,
+    "name": "Banking Apps",
+    "description": "Banking applications",
+    "type": "folder",
+    "parentUid": "136_205"
+  },
+  {
+    "uid": "138_207",
+    "id": 138,
+    "name": "Chase",
+    "description": "Chase banking",
+    "type": "file",
+    "parentUid": "137_206"
+  },
+  {
+    "uid": "139_208",
+    "id": 139,
+    "name": "Citizens",
+    "description": "Citizens banking",
+    "type": "file",
+    "parentUid": "137_206"
+  },
+  {
+    "uid": "140_209",
+    "id": 140,
+    "name": "Payments",
+    "description": "Payment applications",
+    "type": "folder",
+    "parentUid": "136_205"
+  },
+  {
+    "uid": "141_210",
+    "id": 141,
+    "name": "Apple Wallet",
+    "description": "Apple Wallet payments",
+    "type": "file",
+    "parentUid": "140_209"
+  },
+  {
+    "uid": "142_211",
+    "id": 142,
+    "name": "Venmo",
+    "description": "Venmo payments",
+    "type": "file",
+    "parentUid": "140_209"
+  },
+  {
+    "uid": "143_212",
+    "id": 143,
+    "name": "Zelle",
+    "description": "Zelle payments",
+    "type": "file",
+    "parentUid": "140_209"
+  },
+  {
+    "uid": "144_213",
+    "id": 144,
+    "name": "PayPal",
+    "description": "PayPal payments",
+    "type": "file",
+    "parentUid": "140_209"
+  },
+  {
+    "uid": "145_214",
+    "id": 145,
+    "name": "Cash App",
+    "description": "Cash App payments",
+    "type": "file",
+    "parentUid": "140_209"
+  },
+  {
+    "uid": "146_215",
+    "id": 146,
+    "name": "Rewards Shopping",
+    "description": "Rewards and shopping apps",
+    "type": "folder",
+    "parentUid": "136_205"
+  },
+  {
+    "uid": "147_216",
+    "id": 147,
+    "name": "Fetch",
+    "description": "Fetch rewards app",
+    "type": "file",
+    "parentUid": "146_215"
+  },
+  {
+    "uid": "148_217",
+    "id": 148,
+    "name": "Ibotta",
+    "description": "Ibotta rewards app",
+    "type": "file",
+    "parentUid": "146_215"
+  },
+  {
+    "uid": "149_218",
+    "id": 149,
+    "name": "Utilities Subscriptions",
+    "description": "Utilities and subscription services",
+    "type": "folder",
+    "parentUid": "136_205"
+  },
+  {
+    "uid": "150_219",
+    "id": 150,
+    "name": "Blink",
+    "description": "Blink home security",
+    "type": "file",
+    "parentUid": "149_218"
+  },
+  {
+    "uid": "151_220",
+    "id": 151,
+    "name": "AT&T",
+    "description": "AT&T services",
+    "type": "file",
+    "parentUid": "149_218"
+  },
+  {
+    "uid": "152_221",
+    "id": 152,
+    "name": "Entergy",
+    "description": "Entergy utility",
+    "type": "file",
+    "parentUid": "149_218"
+  },
+  {
+    "uid": "153_222",
+    "id": 153,
+    "name": "Cox",
+    "description": "Cox communications",
+    "type": "file",
+    "parentUid": "149_218"
+  },
+  {
+    "uid": "154_223",
+    "id": 154,
+    "name": "Netflix",
+    "description": "Netflix streaming",
+    "type": "file",
+    "parentUid": "149_218"
+  },
+  {
+    "uid": "155_224",
+    "id": 155,
+    "name": "Entertainment Transport",
+    "description": "Entertainment and transportation apps",
+    "type": "folder",
+    "parentUid": "90_159"
+  },
+  {
+    "uid": "156_225",
+    "id": 156,
+    "name": "Travel Tech",
+    "description": "Travel applications",
+    "type": "folder",
+    "parentUid": "155_224"
+  },
+  {
+    "uid": "157_226",
+    "id": 157,
+    "name": "Waze",
+    "description": "Waze navigation",
+    "type": "file",
+    "parentUid": "156_225"
+  },
+  {
+    "uid": "158_227",
+    "id": 158,
+    "name": "Uber",
+    "description": "Uber ride-sharing",
+    "type": "file",
+    "parentUid": "156_225"
+  },
+  {
+    "uid": "159_228",
+    "id": 159,
+    "name": "DoorDash",
+    "description": "DoorDash food delivery",
+    "type": "file",
+    "parentUid": "156_225"
+  },
+  {
+    "uid": "160_229",
+    "id": 160,
+    "name": "UberEats",
+    "description": "UberEats food delivery",
+    "type": "file",
+    "parentUid": "156_225"
+  },
+  {
+    "uid": "161_230",
+    "id": 161,
+    "name": "Bumble",
+    "description": "Bumble dating app",
+    "type": "file",
+    "parentUid": "156_225"
+  },
+  {
+    "uid": "162_231",
+    "id": 162,
+    "name": "Tinder",
+    "description": "Tinder dating app",
+    "type": "file",
+    "parentUid": "156_225"
+  },
+  {
+    "uid": "163_232",
+    "id": 163,
+    "name": "Hinge",
+    "description": "Hinge dating app",
+    "type": "file",
+    "parentUid": "156_225"
+  },
+  {
+    "uid": "164_233",
+    "id": 164,
+    "name": "AI Productivity Tools",
+    "description": "AI-powered productivity applications",
+    "type": "folder",
+    "parentUid": "90_159"
+  },
+  {
+    "uid": "165_234",
+    "id": 165,
+    "name": "Chat Assistants",
+    "description": "AI conversational assistants",
+    "type": "folder",
+    "parentUid": "164_233"
+  },
+  {
+    "uid": "166_235",
+    "id": 166,
+    "name": "ChatGPT",
+    "description": "OpenAI ChatGPT",
+    "type": "file",
+    "parentUid": "165_234"
+  },
+  {
+    "uid": "167_236",
+    "id": 167,
+    "name": "Claude",
+    "description": "Anthropic Claude",
+    "type": "file",
+    "parentUid": "165_234"
+  },
+  {
+    "uid": "168_237",
+    "id": 168,
+    "name": "Gemini",
+    "description": "Google Gemini",
+    "type": "file",
+    "parentUid": "165_234"
+  },
+  {
+    "uid": "169_238",
+    "id": 169,
+    "name": "Grok",
+    "description": "xAI Grok",
+    "type": "file",
+    "parentUid": "165_234"
+  },
+  {
+    "uid": "170_239",
+    "id": 170,
+    "name": "Developer Tools",
+    "description": "AI tools for software development",
+    "type": "folder",
+    "parentUid": "164_233"
+  },
+  {
+    "uid": "171_240",
+    "id": 171,
+    "name": "Cursor",
+    "description": "Cursor AI code editor",
+    "type": "file",
+    "parentUid": "170_239"
+  },
+  {
+    "uid": "172_241",
+    "id": 172,
+    "name": "Windsurf",
+    "description": "Windsurf AI IDE",
+    "type": "file",
+    "parentUid": "170_239"
+  },
+  {
+    "uid": "173_242",
+    "id": 173,
+    "name": "Replit",
+    "description": "Replit cloud IDE",
+    "type": "file",
+    "parentUid": "170_239"
+  },
+  {
+    "uid": "174_243",
+    "id": 174,
+    "name": "GitHub Copilot",
+    "description": "GitHub Copilot AI assistant",
+    "type": "file",
+    "parentUid": "170_239"
+  },
+  {
+    "uid": "175_244",
+    "id": 175,
+    "name": "V0",
+    "description": "Vercel V0 AI UI generator",
+    "type": "file",
+    "parentUid": "170_239"
+  },
+  {
+    "uid": "176_245",
+    "id": 176,
+    "name": "Lovable",
+    "description": "Lovable AI development platform",
+    "type": "file",
+    "parentUid": "170_239"
+  },
+  {
+    "uid": "177_246",
+    "id": 177,
+    "name": "Google AI Studio",
+    "description": "Google AI Studio",
+    "type": "file",
+    "parentUid": "170_239"
+  }
+]
