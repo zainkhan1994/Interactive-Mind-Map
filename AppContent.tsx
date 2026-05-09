@@ -48,13 +48,14 @@ const rawNodes = blueprintData.map((node) => {
 
 const defaultCollapsedIds = rawNodes.filter((node) => node.parentUid !== null).map((node) => node.uid);
 const DEFAULT_PAGE = "map";
+const VALID_PAGES = new Set([DEFAULT_PAGE, "agenda"]);
 
 const getPageFromLocation = () => {
   if (typeof window === "undefined") {
     return DEFAULT_PAGE;
   }
   const hash = window.location.hash.replace("#", "").trim().toLowerCase();
-  return hash === "agenda" ? "agenda" : DEFAULT_PAGE;
+  return VALID_PAGES.has(hash) ? hash : DEFAULT_PAGE;
 };
 
 function buildTree(nodes) {
@@ -189,19 +190,21 @@ export function LifeNodeTogglePrototype() {
   };
 
   const navigateToPage = (nextPage) => {
-    setPage(nextPage);
+    const safePage = VALID_PAGES.has(nextPage) ? nextPage : DEFAULT_PAGE;
     if (typeof window === "undefined") {
+      setPage(safePage);
       return;
     }
-    if (nextPage === DEFAULT_PAGE) {
+    setPage(safePage);
+    if (safePage === DEFAULT_PAGE) {
       if (window.location.hash) {
         window.history.replaceState(null, "", window.location.pathname + window.location.search);
       }
       return;
     }
-    const nextHash = `#${nextPage}`;
+    const nextHash = `#${safePage}`;
     if (window.location.hash !== nextHash) {
-      window.location.hash = nextPage;
+      window.location.hash = safePage;
     }
   };
 
